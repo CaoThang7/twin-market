@@ -16,6 +16,7 @@
       "@hooks/*": ["./src/hooks/*"],
       "@redux/*": ["./src/redux/*"],
       "@services/*": ["./src/services/*"],
+      "@models/*": ["./src/models/*"],
     }
   }
 }
