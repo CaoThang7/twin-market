@@ -4,17 +4,17 @@ import { selectValueTheme } from "@redux/selector/theme"
 import { useSelector } from "react-redux"
 import { Avatar } from '@rneui/themed';
 import Color from "@common/color"
+import imgurl from '@common/imgurl';
 
 const HeaderProfile = () => {
     const mode = useSelector(selectValueTheme)
-    const imgAvatar: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvts5aHBstDkR8PigS4RmZkbZy78zpZoSuOw&usqp=CAU"
 
     return (
         <View style={styles.boxProfile}>
             <Avatar
                 size={90}
                 rounded
-                source={{ uri: imgAvatar }}
+                source={{ uri: imgurl.imgAvatar }}
                 avatarStyle={{
                     borderWidth: 2,
                     borderColor: Color.colorApp.DARKORANGE,
