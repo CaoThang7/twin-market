@@ -3,4 +3,7 @@ export type ListTheme = {
     onPress(): void
     valueSwitch: boolean
     onValueChange(): void
+    titleTheme: string
+    txtBtn: string
+    txtNameTheme: string
 }
