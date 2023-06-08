@@ -1,0 +1,13 @@
+{
+    "profile": {
+        "myOrder": "Đơn hàng của tôi",
+        "myCart": "Giỏ hàng của tôi",
+        "theme": "Chế độ nền",
+        "language": "Ngôn Ngữ",
+        "support": "Hỗ trợ",
+        "titleTheme": "Chọn chế độ nền",
+        "titleLanguage": "Chọn ngôn ngữ",
+        "textBtnCancel": "Huỷ bỏ",
+        "textNameTheme": "Chế độ tối"
+    }
+}

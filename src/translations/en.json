@@ -1,0 +1,13 @@
+{
+    "profile": {
+        "myOrder": "My Order",
+        "myCart": "My Cart",
+        "theme": "Theme",
+        "language": "Language",
+        "support": "Support",
+        "titleTheme": "Choose Theme",
+        "titleLanguage": "Choose Language",
+        "textBtnCancel": "Cancel",
+        "textNameTheme": "Dark mode"
+    }
+}
