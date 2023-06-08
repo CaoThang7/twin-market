@@ -1,0 +1,1 @@
+export const selectValueTheme = (state: any) => state.theme.mode

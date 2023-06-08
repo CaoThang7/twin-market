@@ -1,5 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
+import { useSelector } from "react-redux"
+import { selectValueTheme } from "@redux/selector/theme"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import ProfileIcons from 'react-native-vector-icons/Feather'
 import HomeIcons from 'react-native-vector-icons/Entypo'
@@ -11,6 +13,7 @@ import Color from "@common/color"
 const Tab = createBottomTabNavigator();
 
 const HomeTabs = () => {
+    const mode = useSelector(selectValueTheme)
 
     return (
         <Tab.Navigator
@@ -21,7 +24,7 @@ const HomeTabs = () => {
                 tabBarBackground: () => (
                     <View style={{
                         flex: 1,
-                        backgroundColor: Color.colorApp.WHITE,
+                        backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE,
                         borderTopLeftRadius: 20,
                         borderTopRightRadius: 20,
                     }} />

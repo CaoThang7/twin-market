@@ -1,14 +1,13 @@
-import { StyleSheet, View } from 'react-native'
 import React from 'react'
+import { StyleSheet, View } from 'react-native'
 import MyShopping from './myShopping'
 import UtilsProfile from './utilsProfile'
 
 const BodyProfile = () => {
-
     return (
         <View style={styles.container}>
             <MyShopping />
-            <UtilsProfile/>
+            <UtilsProfile />
         </View>
     )
 }

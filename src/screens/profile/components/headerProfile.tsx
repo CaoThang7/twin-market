@@ -1,19 +1,28 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import { selectValueTheme } from "@redux/selector/theme"
+import { useSelector } from "react-redux"
 import { Avatar } from '@rneui/themed';
 import Color from "@common/color"
 
 const HeaderProfile = () => {
+    const mode = useSelector(selectValueTheme)
+    const imgAvatar: string = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvts5aHBstDkR8PigS4RmZkbZy78zpZoSuOw&usqp=CAU"
+
     return (
         <View style={styles.boxProfile}>
             <Avatar
                 size={90}
                 rounded
-                source={{ uri: "https://randomuser.me/api/portraits/men/36.jpg" }}
+                source={{ uri: imgAvatar }}
+                avatarStyle={{
+                    borderWidth: 2,
+                    borderColor: Color.colorApp.DARKORANGE,
+                }}
             />
             <View style={styles.txtStyle}>
-                <Text style={styles.txtName}>lycaothang</Text>
-                <Text style={styles.txtEmail}>thangly2k1@gmail.com</Text>
+                <Text style={[styles.txtName, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>lycaothang</Text>
+                <Text style={[styles.txtEmail, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>thangly2k1@gmail.com</Text>
             </View>
         </View>
     )
@@ -30,15 +39,13 @@ const styles = StyleSheet.create({
     txtStyle: {
         marginTop: 10,
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     txtName: {
-        color: Color.colorApp.BLACK,
         fontWeight: "bold",
         fontSize: 22
     },
     txtEmail: {
-        color: Color.colorApp.BLACK,
         fontSize: 22
     },
 })

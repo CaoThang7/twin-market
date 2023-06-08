@@ -1,12 +1,15 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { selectValueTheme } from "@redux/selector/theme"
 import { myOnlineShopping } from '@models/utilsUser'
-import CaretRight from 'react-native-vector-icons/AntDesign'
-import Cart from 'react-native-vector-icons/FontAwesome'
-import Bill from 'react-native-vector-icons/AntDesign'
+import { useSelector } from "react-redux"
 import Color from "@common/color"
+import Bill from 'react-native-vector-icons/AntDesign'
+import Cart from 'react-native-vector-icons/FontAwesome'
+import CaretRight from 'react-native-vector-icons/AntDesign'
 
 const MyShopping = () => {
+    const mode = useSelector(selectValueTheme)
 
     const navigateMyShopping = (category: string) => {
         if (category === "order") {
@@ -18,7 +21,7 @@ const MyShopping = () => {
     }
 
     return (
-        <View style={styles.boxUserShopping}>
+        <View style={[styles.boxUserShopping, { backgroundColor: mode ? Color.colorApp.WHITE : Color.colorApp.OPACITYBLACK }]}>
             {myOnlineShopping.map((e) =>
                 <TouchableOpacity
                     style={styles.itemShopping}
@@ -26,16 +29,36 @@ const MyShopping = () => {
                     onPress={() => navigateMyShopping(e.category)}>
                     {e.category == 'order' ?
                         <>
-                            <Bill name='copy1' color={Color.colorApp.WHITE} size={20} />
+                            <Bill
+                                name='copy1'
+                                color={mode ? Color.colorApp.BLACK : Color.colorApp.WHITE}
+                                size={20}
+                            />
                         </>
                         :
                         <>
-                            <Cart name='shopping-basket' color={Color.colorApp.WHITE} size={18} />
+                            <Cart
+                                name='shopping-basket'
+                                color={mode ? Color.colorApp.BLACK : Color.colorApp.WHITE}
+                                size={18}
+                            />
                         </>
                     }
                     <View style={styles.itemRight}>
-                        <Text style={styles.txtItemRight}>{e.name}</Text>
-                        <CaretRight name='caretright' color={Color.colorApp.WHITE} size={20} />
+                        <Text
+                            style={[
+                                styles.txtItemRight,
+                                {
+                                    color: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE,
+                                }
+                            ]}>
+                            {e.name}
+                        </Text>
+                        <CaretRight
+                            name='caretright'
+                            color={mode ? Color.colorApp.BLACK : Color.colorApp.WHITE}
+                            size={20}
+                        />
                     </View>
                 </TouchableOpacity>
             )}
@@ -47,7 +70,6 @@ export default MyShopping
 
 const styles = StyleSheet.create({
     boxUserShopping: {
-        backgroundColor: Color.colorApp.OPACITYBLACK,
         borderRadius: 10,
         paddingHorizontal: 10,
     },
@@ -64,7 +86,6 @@ const styles = StyleSheet.create({
         marginLeft: 10
     },
     txtItemRight: {
-        color: Color.colorApp.WHITE,
         fontSize: 18,
     },
 })
