@@ -1,0 +1,1 @@
+export const selectValueLanguage = (state: any) => state.language.locale
