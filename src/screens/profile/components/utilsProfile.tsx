@@ -58,7 +58,7 @@ const UtilsProfile: React.FunctionComponent<BottomSheetComponentProps> = () => {
                                     color: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE
                                 }
                             ]}>
-                            {e.name}
+                            {t(`profile:${e.name}`)}
                         </Text>
                         <CaretRight
                             name='caretright'

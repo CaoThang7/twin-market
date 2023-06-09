@@ -6,8 +6,8 @@ interface UtilsUser {
 }
 
 let myOnlineShopping: UtilsUser[] = [
-    { id: 1, name: 'my order', category: 'order', icon: '' },
-    { id: 2, name: 'my cart', category: 'cart', icon: '' },
+    { id: 1, name: 'myOrder', category: 'order', icon: '' },
+    { id: 2, name: 'myCart', category: 'cart', icon: '' },
 ];
 
 let utilsProfile: UtilsUser[] = [
