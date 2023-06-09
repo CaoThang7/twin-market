@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { BottomSheetTheme, BottomSheetLanguage } from '@components/bottomsheet'
+import { useNavigation } from "@react-navigation/native"
 import { selectValueTheme } from "@redux/selector/theme"
 import { useDispatch, useSelector } from "react-redux"
 import { toggleDarkMode } from "@redux/slices/theme"
@@ -8,6 +9,7 @@ import { changeLanguage } from "@redux/slices/language"
 import { utilsProfile } from '@models/utilsUser'
 import { useTranslation } from "react-i18next"
 import Color from "@common/color"
+import NameNavigator from "@common/navigator"
 import CaretRight from 'react-native-vector-icons/AntDesign'
 import UtilsIcon from 'react-native-vector-icons/MaterialCommunityIcons'
 
@@ -19,7 +21,8 @@ const UtilsProfile: React.FunctionComponent<BottomSheetComponentProps> = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isVisibleLanguage, setIsVisibleLanguage] = useState(false);
     const dispatch = useDispatch();
-    const mode = useSelector(selectValueTheme)
+    const navigation: any = useNavigation();
+    const mode = useSelector(selectValueTheme);
 
     const navigateMyUtils = (category: string) => {
         if (category === "theme") {
@@ -29,7 +32,7 @@ const UtilsProfile: React.FunctionComponent<BottomSheetComponentProps> = () => {
             setIsVisibleLanguage(true)
         }
         if (category === "support") {
-            console.log("support")
+            navigation.navigate(NameNavigator.SUPPORT)
         }
     }
 

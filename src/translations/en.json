@@ -9,5 +9,13 @@
         "titleLanguage": "Choose Language",
         "textBtnCancel": "Cancel",
         "textNameTheme": "Dark mode"
+    },
+    "appInfo": {
+        "nameApp": "Name App",
+        "version": "Version",
+        "hostType": "HostType",
+        "lanTyp": "LanTyp",
+        "main": "Main",
+        "device": "Device"
     }
 }
