@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { selectValueTheme } from "@redux/selector/theme"
 import { myOnlineShopping } from '@models/utilsUser'
+import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import Color from "@common/color"
 import Bill from 'react-native-vector-icons/AntDesign'
@@ -10,6 +11,7 @@ import CaretRight from 'react-native-vector-icons/AntDesign'
 
 const MyShopping = () => {
     const mode = useSelector(selectValueTheme)
+    const { t } = useTranslation();
 
     const navigateMyShopping = (category: string) => {
         if (category === "order") {
@@ -52,7 +54,7 @@ const MyShopping = () => {
                                     color: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE,
                                 }
                             ]}>
-                            {e.name}
+                            {t(`profile:${e.name}`)}
                         </Text>
                         <CaretRight
                             name='caretright'
