@@ -32,7 +32,7 @@ const AppInfo = () => {
             {/* lanTyp */}
             <View style={styles.boxInfoApp}>
                 <Text style={[styles.txtName, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>{t("appInfo:lanTyp")}</Text>
-                <Text>{settingExpo.lanType}</Text>
+                <Text style={styles.txtValue}>{settingExpo.lanType}</Text>
             </View>
             {/* Main */}
             <View style={styles.boxInfoApp}>
