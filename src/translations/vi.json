@@ -9,5 +9,13 @@
         "titleLanguage": "Chọn ngôn ngữ",
         "textBtnCancel": "Huỷ bỏ",
         "textNameTheme": "Chế độ tối"
+    },
+    "appInfo": {
+        "nameApp": "Tên ứng dụng",
+        "version": "Phiên bản",
+        "hostType": "Loại máy chủ",
+        "lanTyp": "Loại lanTyp",
+        "main": "Chủ yếu",
+        "device": "Thiết bị"
     }
 }
