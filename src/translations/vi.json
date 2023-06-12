@@ -17,5 +17,10 @@
         "lanTyp": "Loại lanTyp",
         "main": "Chủ yếu",
         "device": "Thiết bị"
+    },
+    "account": {
+        "txtNameApp": "Twin Market",
+        "txtDescription": "Mua sắm dễ dàng, hạnh phúc",
+        "txtBtnLogin": "Đăng nhập ngay"
     }
 }

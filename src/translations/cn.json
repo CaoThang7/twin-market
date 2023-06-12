@@ -17,5 +17,10 @@
         "lanTyp": "局域网类型",
         "main": "主要的",
         "device": "设备"
+    },
+    "account": {
+        "txtNameApp": "Twin Market",
+        "txtDescription": "轻松购物, 快乐购物",
+        "txtBtnLogin": "现在登录"
     }
 }
