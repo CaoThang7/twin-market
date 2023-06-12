@@ -17,5 +17,10 @@
         "lanTyp": "LanTyp",
         "main": "Main",
         "device": "Device"
+    },
+    "account": {
+        "txtNameApp": "Twin Market",
+        "txtDescription": "shop easy, shop happy",
+        "txtBtnLogin": "Login now"
     }
 }
