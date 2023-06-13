@@ -22,5 +22,10 @@
         "txtNameApp": "Twin Market",
         "txtDescription": "Mua sắm dễ dàng, hạnh phúc",
         "txtBtnLogin": "Đăng nhập ngay"
+    },
+    "auth": {
+        "logIn": "Đăng nhập",
+        "yourNumber": "Nhập số điện thoại của bạn",
+        "orUse": "Hoặc sử dụng"
     }
 }
