@@ -22,5 +22,10 @@
         "txtNameApp": "Twin Market",
         "txtDescription": "shop easy, shop happy",
         "txtBtnLogin": "Login now"
+    },
+    "auth": {
+        "logIn": "Log In",
+        "yourNumber": "Enter your phone number",
+        "orUse": "or continue with"
     }
 }
