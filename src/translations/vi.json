@@ -26,6 +26,8 @@
     "auth": {
         "logIn": "Đăng nhập",
         "yourNumber": "Nhập số điện thoại của bạn",
-        "orUse": "Hoặc sử dụng"
+        "orUse": "Hoặc sử dụng",
+        "yourCode": "Nhập code của bạn",
+        "confirmCode": "Xác nhận mã"
     }
 }

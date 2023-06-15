@@ -26,6 +26,8 @@
     "auth": {
         "logIn": "登入",
         "yourNumber": "输入你的电话号码",
-        "orUse": "或者继续"
+        "orUse": "或者继续",
+        "yourCode": "输入您的代码",
+        "confirmCode": "确认码"
     }
 }

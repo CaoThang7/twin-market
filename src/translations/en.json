@@ -26,6 +26,8 @@
     "auth": {
         "logIn": "Log In",
         "yourNumber": "Enter your phone number",
-        "orUse": "or continue with"
+        "orUse": "or continue with",
+        "yourCode": "Enter your code",
+        "confirmCode": "Confirm code"
     }
 }

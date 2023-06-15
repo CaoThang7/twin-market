@@ -11,6 +11,7 @@ const TextInputComponent: React.FC<ListTextInput> = (props) => {
             style={styles.inputStyle}
             onChangeText={props.onChangeText}
             underlineColorAndroid="transparent"
+            keyboardType={props.keyboardType}
         />
     )
 }
@@ -25,8 +26,7 @@ const styles = StyleSheet.create({
         borderTopStartRadius: 10,
         borderRadius: 10,
         borderWidth: 1,
-        borderColor: Color.colorApp.GHOSTWHITE,
-        marginVertical: 10,
+        borderColor: Color.colorApp.DARKORANGE,
         color: Color.colorApp.BLACK,
         paddingLeft: 15,
         fontSize: 16
