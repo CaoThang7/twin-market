@@ -3,5 +3,5 @@ export type ListButton = {
     style: {}
     color: string[]
     titleStyle: {}
-    title: string
+    title: string | any
 }

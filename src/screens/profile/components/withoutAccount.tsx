@@ -1,15 +1,22 @@
-import { StyleSheet, Text, View, ImageBackground } from 'react-native'
 import React from 'react'
-import imgLogoApp from '@common/imgurl'
-import ButtonComponent from '@components/button'
-import Color from "@common/color"
+import { StyleSheet, Text, View, ImageBackground } from 'react-native'
+import { selectValueTheme } from "@redux/selector/theme"
+import { useNavigation } from "@react-navigation/native"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
-import { selectValueTheme } from "@redux/selector/theme"
+import imgLogoApp from '@common/imgurl'
+import Color from "@common/color"
+import NameNavigator from "@common/navigator"
+import ButtonComponent from '@components/button'
 
 const WithoutAccount = () => {
   const { t } = useTranslation();
   const mode = useSelector(selectValueTheme);
+  const navigation: any = useNavigation();
+
+  const onMoveLogin = () => {
+    navigation.navigate(NameNavigator.AUTH)
+  }
 
   return (
     <View style={[styles.container, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE }]}>
@@ -45,7 +52,7 @@ const WithoutAccount = () => {
         style={styles.btnLoginNow}
         title={t("account:txtBtnLogin")}
         titleStyle={styles.titleStyle}
-        onPress={() => { }}
+        onPress={() => onMoveLogin()}
       />
     </View>
   )
