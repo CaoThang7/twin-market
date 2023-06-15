@@ -1,12 +1,13 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { selectValueTheme } from "@redux/selector/theme"
+import { userProfile } from '@models/userProfile'
 import { useSelector } from "react-redux"
-import { Avatar } from '@rneui/themed';
+import { Avatar } from '@rneui/themed'
 import Color from "@common/color"
-import imgurl from '@common/imgurl';
+import imgurl from '@common/imgurl'
 
-const HeaderProfile = () => {
+const HeaderProfile: React.FC<userProfile> = (props) => {
     const mode = useSelector(selectValueTheme)
 
     return (
@@ -21,8 +22,12 @@ const HeaderProfile = () => {
                 }}
             />
             <View style={styles.txtStyle}>
-                <Text style={[styles.txtName, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>lycaothang</Text>
-                <Text style={[styles.txtEmail, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>thangly2k1@gmail.com</Text>
+                <Text style={[styles.txtName, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>
+                    {props.fullname ? props.fullname : "fullname"}
+                </Text>
+                <Text style={[styles.txtEmail, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>
+                    {props.email ? props.email : "email"}
+                </Text>
             </View>
         </View>
     )

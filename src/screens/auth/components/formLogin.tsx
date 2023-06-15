@@ -11,6 +11,7 @@ import { StyleSheet, View } from 'react-native'
 import { firebaseConfig } from 'firebase.config'
 import { FirebaseRecaptchaVerifierModal } from 'expo-firebase-recaptcha'
 import { useNavigation } from "@react-navigation/native"
+import { createUser } from '@services/user'
 
 const FormLogin = () => {
     const { t } = useTranslation()
@@ -68,6 +69,8 @@ const FormLogin = () => {
                 if (result) {
                     hideLoadingDialog()
                     setCode('')
+                    const providerData = result.user?.providerData[0]
+                    createNewUserWithData(providerData)
                     navigation.navigate(NameNavigator.HOMETAB)
                 }
             })
@@ -75,6 +78,17 @@ const FormLogin = () => {
                 hideLoadingDialog()
                 alert("Invalid code.")
             })
+    }
+
+    const createNewUserWithData = (data: any) => {
+        const user = {
+            id: data.uid,
+            fullName: data?.displayName,
+            email: data?.email,
+            phoneNumber: data.phoneNumber,
+            photoUrl: data?.photoURL,
+        }
+        createUser(user)
     }
 
     return (
