@@ -1,1 +1,3 @@
-export const selectValueTheme = (state: any) => state.theme.mode
+import { RootState } from "@redux/store"
+
+export const selectValueTheme = (state: RootState) => state.theme.mode

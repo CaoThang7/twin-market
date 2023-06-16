@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { BottomSheetTheme, BottomSheetLanguage } from '@components/bottomsheet'
+import { useAppSelector, useAppDispatch } from "@hooks/useTypeRedux"
 import { useNavigation } from "@react-navigation/native"
 import { selectValueTheme } from "@redux/selector/theme"
-import { useDispatch, useSelector } from "react-redux"
 import { toggleDarkMode } from "@redux/slices/theme"
 import { changeLanguage } from "@redux/slices/language"
 import { utilsProfile } from '@models/utilsUser'
@@ -20,9 +20,9 @@ const UtilsProfile: React.FunctionComponent<BottomSheetComponentProps> = () => {
     const [valueLng, setValueLng] = useState('en');
     const [isVisible, setIsVisible] = useState(false);
     const [isVisibleLanguage, setIsVisibleLanguage] = useState(false);
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const navigation: any = useNavigation();
-    const mode = useSelector(selectValueTheme);
+    const mode = useAppSelector(selectValueTheme);
 
     const navigateMyUtils = (category: string) => {
         if (category === "theme") {
