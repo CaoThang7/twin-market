@@ -8,7 +8,9 @@
         "titleTheme": "選擇主題",
         "titleLanguage": "選擇語言",
         "textBtnCancel": "取消",
-        "textNameTheme": "黑暗模式"
+        "textNameTheme": "黑暗模式",
+        "info": "资讯",
+        "choosePhoto": "选择一张照片"
     },
     "appInfo": {
         "nameApp": "命名应用程序",
@@ -28,6 +30,11 @@
         "yourNumber": "输入你的电话号码",
         "orUse": "或者继续",
         "yourCode": "输入您的代码",
-        "confirmCode": "确认码"
+        "confirmCode": "确认码",
+        "logOut": "登出",
+        "titleWantLogout": "您确定要退出吗?",
+        "descriptionWantLogout": "祝你有美好的一天!",
+        "btnClose": "关闭",
+        "btnYes": "是的"
     }
 }

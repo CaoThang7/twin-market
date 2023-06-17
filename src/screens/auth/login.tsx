@@ -1,14 +1,14 @@
 import React from 'react'
 import Color from "@common/color"
-import { StyleSheet, View, Image, Dimensions, Text } from 'react-native'
+import imgLogoApp from '@common/imgurl'
+import FormLogin from './components/formLogin'
+import { StyleSheet, View, Image, Dimensions } from 'react-native'
 import { selectValueTheme } from "@redux/selector/theme"
 import { useNavigation } from "@react-navigation/native"
 import { Icon, Header } from "react-native-elements"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 const { width } = Dimensions.get("window")
-import imgLogoApp from '@common/imgurl'
-import FormLogin from './components/formLogin'
 
 const Login = () => {
   const { t } = useTranslation()
@@ -53,7 +53,6 @@ const Login = () => {
           />
         </View>
         <FormLogin />
-        <Text style={styles.txtOr}>{t("auth:orUse")}</Text>
       </View>
     </View>
   )
@@ -75,10 +74,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   logoTop: { width: 100, height: 100, marginTop: width / 10 - 40 },
-  txtOr: {
-    textAlign: "center",
-    color: Color.colorApp.DRAKGREY,
-    marginTop: width / 20,
-    fontSize: 18,
-  },
 })

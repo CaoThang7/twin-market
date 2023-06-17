@@ -8,7 +8,9 @@
         "titleTheme": "Chọn chế độ nền",
         "titleLanguage": "Chọn ngôn ngữ",
         "textBtnCancel": "Huỷ bỏ",
-        "textNameTheme": "Chế độ tối"
+        "textNameTheme": "Chế độ tối",
+        "info": "Thông tin tài khoản",
+        "choosePhoto": "Thêm ảnh"
     },
     "appInfo": {
         "nameApp": "Tên ứng dụng",
@@ -28,6 +30,11 @@
         "yourNumber": "Nhập số điện thoại của bạn",
         "orUse": "Hoặc sử dụng",
         "yourCode": "Nhập code của bạn",
-        "confirmCode": "Xác nhận mã"
+        "confirmCode": "Xác nhận mã",
+        "logOut": "Đăng xuất",
+        "titleWantLogout": "Bạn có chắc chắn muốn đăng xuất không?",
+        "descriptionWantLogout": "Ngày mới tốt lành!",
+        "btnClose": "Đóng",
+        "btnYes": "Đồng ý"
     }
 }
