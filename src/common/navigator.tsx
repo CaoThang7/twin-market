@@ -6,6 +6,7 @@ enum NameNavigator {
     PROFILE = "Profile",
     SUPPORT = "Support",
     LOGIN = "Login",
+    STPROFILE = "SettingProfile"
 }
 
 export default NameNavigator 

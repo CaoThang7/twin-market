@@ -8,7 +8,9 @@
         "titleTheme": "Choose Theme",
         "titleLanguage": "Choose Language",
         "textBtnCancel": "Cancel",
-        "textNameTheme": "Dark mode"
+        "textNameTheme": "Dark mode",
+        "info": "Infomation",
+        "choosePhoto": "Choose photo"
     },
     "appInfo": {
         "nameApp": "Name App",
@@ -28,6 +30,11 @@
         "yourNumber": "Enter your phone number",
         "orUse": "or continue with",
         "yourCode": "Enter your code",
-        "confirmCode": "Confirm code"
+        "confirmCode": "Confirm code",
+        "logOut": "Logout",
+        "titleWantLogout": "Are you sure you want to sign out?",
+        "descriptionWantLogout": "Have a good day!",
+        "btnClose": "Close",
+        "btnYes": "Yes"
     }
 }
