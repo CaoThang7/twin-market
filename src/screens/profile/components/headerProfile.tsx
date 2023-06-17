@@ -5,7 +5,6 @@ import { userProfile } from '@models/userProfile'
 import { useSelector } from "react-redux"
 import { Avatar } from '@rneui/themed'
 import Color from "@common/color"
-import imgurl from '@common/imgurl'
 
 const HeaderProfile: React.FC<userProfile> = (props) => {
     const mode = useSelector(selectValueTheme)
@@ -15,7 +14,7 @@ const HeaderProfile: React.FC<userProfile> = (props) => {
             <Avatar
                 size={90}
                 rounded
-                source={{ uri: imgurl.imgAvatar }}
+                source={{ uri: props.image }}
                 avatarStyle={{
                     borderWidth: 2,
                     borderColor: Color.colorApp.DARKORANGE,

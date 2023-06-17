@@ -7,7 +7,8 @@ import { useTranslation } from "react-i18next"
 import { selectValueTheme } from "@redux/selector/theme"
 
 type dataProfile = {
-    toggleDialogLogOut(): void
+    toggleDialogLogOut(): void,
+    onChooseImage(): void
 }
 
 const MySpeedDial: React.FC<dataProfile> = (props) => {
@@ -39,7 +40,7 @@ const MySpeedDial: React.FC<dataProfile> = (props) => {
                 icon={{ name: 'camera', color: '#fff' }}
                 title={titleChoosePhoto}
                 titleStyle={[styles.titleSpeedDialAction, { backgroundColor: Color.colorApp.CRIMSON }]}
-                onPress={() => { }}
+                onPress={() => props.onChooseImage()}
                 buttonStyle={styles.btnSpeedDial}
             />
             <SpeedDial.Action

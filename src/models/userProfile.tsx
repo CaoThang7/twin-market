@@ -3,5 +3,6 @@ export interface userProfile {
     fullname: string | undefined,
     id: string | undefined,
     phoneNumber: string | undefined,
-    photoUrl: string | undefined
+    photoUrl: string | undefined,
+    image: string | undefined
 }
