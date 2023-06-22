@@ -1,6 +1,6 @@
 export interface userProfile {
     email: string | undefined,
-    fullname: string | undefined,
+    fullName: string | undefined,
     id: string | undefined,
     phoneNumber: string | undefined,
     photoUrl: string | undefined,

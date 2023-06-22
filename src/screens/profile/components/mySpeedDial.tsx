@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import Color from "@common/color"
 import { StyleSheet } from 'react-native'
 import { useSelector } from "react-redux"
 import { SpeedDial } from '@rneui/themed'
 import { useTranslation } from "react-i18next"
 import { selectValueTheme } from "@redux/selector/theme"
+import { useNavigation } from "@react-navigation/native"
+import NameNavigator from "@common/navigator"
+import Color from "@common/color"
 
 type dataProfile = {
     toggleDialogLogOut(): void,
@@ -18,6 +20,11 @@ const MySpeedDial: React.FC<dataProfile> = (props) => {
     const titleInfo = t("profile:info")
     const titleChoosePhoto = t("profile:choosePhoto")
     const titleLogout = t("auth:logOut")
+    const navigation: any = useNavigation();
+
+    const gotoSettingProfile = () => {
+        navigation.navigate(NameNavigator.STPROFILE)
+    }
 
     return (
         <SpeedDial
@@ -33,7 +40,7 @@ const MySpeedDial: React.FC<dataProfile> = (props) => {
                 icon={{ name: 'info', color: '#fff' }}
                 title={titleInfo}
                 titleStyle={[styles.titleSpeedDialAction, { backgroundColor: Color.colorApp.GREEN }]}
-                onPress={() => { }}
+                onPress={gotoSettingProfile}
                 buttonStyle={styles.btnSpeedDial}
             />
             <SpeedDial.Action

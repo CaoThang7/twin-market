@@ -10,7 +10,8 @@
         "textBtnCancel": "取消",
         "textNameTheme": "黑暗模式",
         "info": "资讯",
-        "choosePhoto": "选择一张照片"
+        "choosePhoto": "选择一张照片",
+        "myFullName": "全名"
     },
     "appInfo": {
         "nameApp": "命名应用程序",
@@ -36,5 +37,14 @@
         "descriptionWantLogout": "祝你有美好的一天!",
         "btnClose": "关闭",
         "btnYes": "是的"
+    },
+    "settings": {
+        "nofullName": "还没有全名",
+        "noEmail": "没有电子邮件",
+        "enterFullName": "输入您的全名",
+        "enterEmail": "输入你的电子邮箱",
+        "btnUpdate": "更新",
+        "updateSuccess": "更新完成",
+        "titleBtnSuccess": "查看您的个人资料"
     }
 }
