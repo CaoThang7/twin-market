@@ -10,7 +10,8 @@
         "textBtnCancel": "Cancel",
         "textNameTheme": "Dark mode",
         "info": "Infomation",
-        "choosePhoto": "Choose photo"
+        "choosePhoto": "Choose photo",
+        "myFullName": "FullName"
     },
     "appInfo": {
         "nameApp": "Name App",
@@ -36,5 +37,14 @@
         "descriptionWantLogout": "Have a good day!",
         "btnClose": "Close",
         "btnYes": "Yes"
+    },
+    "settings": {
+        "nofullName": "No fullname yet",
+        "noEmail": "No email yet",
+        "enterFullName": "Enter your fullname",
+        "enterEmail": "Enter your email",
+        "btnUpdate": "Update",
+        "updateSuccess": "Update successfully",
+        "titleBtnSuccess": "See your profile"
     }
 }

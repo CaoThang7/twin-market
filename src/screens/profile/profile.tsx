@@ -47,7 +47,7 @@ const Profile = () => {
     }
 
     const fillData = () => {
-        if (profile?.photoUrl == null) {
+        if (profile?.photoUrl == null || profile?.photoUrl == "") {
             setImage({ uri: imgurl.imgAvatar })
         } else {
             setImage({ ...image, uri: profile?.photoUrl })
@@ -91,7 +91,7 @@ const Profile = () => {
         <SafeAreaView style={[styles.container, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE }]}>
             <HeaderProfile
                 id={profile?.id}
-                fullname={profile?.fullname}
+                fullName={profile?.fullName}
                 email={profile?.email}
                 phoneNumber={profile?.phoneNumber}
                 photoUrl={profile?.photoUrl}

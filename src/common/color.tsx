@@ -13,7 +13,8 @@ enum colorApp {
     DRAKGREY = '#606060',
     OPACITYWHITE = 'rgba(255, 255, 255, 0.2)',
     OPACITYBLACK = 'rgba(0, 0, 0, 0.5)',
-    CRIMSON = "#DC143C"
+    CRIMSON = "#DC143C",
+    GHOSTBLACK = "#303030"
 }
 
 export const bgColor = {

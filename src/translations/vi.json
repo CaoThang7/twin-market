@@ -10,7 +10,8 @@
         "textBtnCancel": "Huỷ bỏ",
         "textNameTheme": "Chế độ tối",
         "info": "Thông tin tài khoản",
-        "choosePhoto": "Thêm ảnh"
+        "choosePhoto": "Thêm ảnh",
+        "myFullName": "Họ và tên"
     },
     "appInfo": {
         "nameApp": "Tên ứng dụng",
@@ -36,5 +37,14 @@
         "descriptionWantLogout": "Ngày mới tốt lành!",
         "btnClose": "Đóng",
         "btnYes": "Đồng ý"
+    },
+    "settings": {
+        "nofullName": "Chưa có họ và tên",
+        "noEmail": "Chưa có email",
+        "enterFullName": "Nhập họ và tên",
+        "enterEmail": "Nhập email",
+        "btnUpdate": "Cập nhật",
+        "updateSuccess": "Cập nhật thành công",
+        "titleBtnSuccess": "Xem hồ sơ"
     }
 }

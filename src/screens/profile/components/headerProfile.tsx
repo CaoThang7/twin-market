@@ -2,11 +2,13 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { selectValueTheme } from "@redux/selector/theme"
 import { userProfile } from '@models/userProfile'
+import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import { Avatar } from '@rneui/themed'
 import Color from "@common/color"
 
 const HeaderProfile: React.FC<userProfile> = (props) => {
+    const { t } = useTranslation()
     const mode = useSelector(selectValueTheme)
 
     return (
@@ -22,7 +24,7 @@ const HeaderProfile: React.FC<userProfile> = (props) => {
             />
             <View style={styles.txtStyle}>
                 <Text style={[styles.txtName, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>
-                    {props.fullname ? props.fullname : "fullname"}
+                    {props.fullName ? props.fullName : t("profile:myFullName")}
                 </Text>
                 <Text style={[styles.txtEmail, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>
                     {props.email ? props.email : "email"}
