@@ -11,7 +11,7 @@ import { StyleSheet, View } from 'react-native'
 import { firebaseConfig } from 'firebase.config'
 import { FirebaseRecaptchaVerifierModal } from 'expo-firebase-recaptcha'
 import { useNavigation } from "@react-navigation/native"
-import { createUser } from '@services/user'
+import { createUser, findUserById } from '@services/user'
 
 const FormLogin = () => {
     const { t } = useTranslation()
@@ -80,7 +80,7 @@ const FormLogin = () => {
             })
     }
 
-    const createNewUserWithData = (data: any) => {
+    const createNewUserWithData = async (data: any) => {
         const user = {
             id: data.uid,
             fullName: data?.displayName,
@@ -88,7 +88,11 @@ const FormLogin = () => {
             phoneNumber: data.phoneNumber,
             photoUrl: data?.photoURL,
         }
-        createUser(user)
+        const userId = await findUserById(data.uid)
+        // checkUserExistByUid
+        if (userId == null || !userId) {
+            createUser(user)
+        }
     }
 
     return (
