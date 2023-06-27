@@ -46,5 +46,13 @@
         "btnUpdate": "Cập nhật",
         "updateSuccess": "Cập nhật thành công",
         "titleBtnSuccess": "Xem hồ sơ"
+    },
+    "categories": {
+        "title": "Loại sản phẩm",
+        "titleItemCarb": "Cua",
+        "titleItemFish": "Cá",
+        "titleItemMeat": "Thịt",
+        "titleItemVegetables": "Rau củ",
+        "titleItemWater": "Nước"
     }
 }

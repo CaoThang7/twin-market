@@ -46,5 +46,13 @@
         "btnUpdate": "Update",
         "updateSuccess": "Update successfully",
         "titleBtnSuccess": "See your profile"
+    },
+    "categories": {
+        "title": "Categories",
+        "titleItemCarb": "Carb",
+        "titleItemFish": "Fish",
+        "titleItemMeat": "Meat",
+        "titleItemVegetables": "Vegetables",
+        "titleItemWater": "Water"
     }
 }

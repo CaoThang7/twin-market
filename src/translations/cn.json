@@ -46,5 +46,13 @@
         "btnUpdate": "更新",
         "updateSuccess": "更新完成",
         "titleBtnSuccess": "查看您的个人资料"
+    },
+    "categories": {
+        "title": "类别",
+        "titleItemCarb": "糖类",
+        "titleItemFish": "鱼",
+        "titleItemMeat": "肉",
+        "titleItemVegetables": "蔬菜",
+        "titleItemWater": "水"
     }
 }
