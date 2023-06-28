@@ -4,14 +4,27 @@ import NameStack from "@common/navigator"
 import HomeTabs from "./homeTabs"
 import Support from "@screens/support"
 import SettingProfile from "@screens/profile/settingProfile"
+import ProductByCategoryId from "@screens/home/components/productByCategoryId"
 
-const Stack = createStackNavigator()
+export type RootStackParamList = {
+    HomeTab: undefined
+    Support: undefined
+    SettingProfile: undefined
+    ProductListByCategoryId: {
+        categoriesId: string,
+        title: string,
+        colorBg: string
+    }
+};
+
+const Stack = createStackNavigator<RootStackParamList>()
 
 const MainStack = () => {
     return (
         <Stack.Navigator
             screenOptions={{ gestureEnabled: false }}
             initialRouteName={NameStack.HOMETAB}>
+            {/* profile */}
             <Stack.Group>
                 <Stack.Screen
                     options={{ headerShown: false }}
@@ -27,6 +40,14 @@ const MainStack = () => {
                     options={{ headerShown: false }}
                     name={NameStack.STPROFILE}
                     component={SettingProfile}
+                />
+            </Stack.Group>
+            {/* home */}
+            <Stack.Group>
+                <Stack.Screen
+                    options={{ headerShown: false }}
+                    name={NameStack.PRODUCTLIST}
+                    component={ProductByCategoryId}
                 />
             </Stack.Group>
         </Stack.Navigator>
