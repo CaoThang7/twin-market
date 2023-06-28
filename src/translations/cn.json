@@ -54,5 +54,12 @@
         "titleItemMeat": "肉",
         "titleItemVegetables": "蔬菜",
         "titleItemWater": "水"
+    },
+    "products": {
+        "title": "平时买",
+        "kingCrabCanada": "加拿大帝王蟹",
+        "tomatoJapan": "日本番茄",
+        "salmon": "三文鱼",
+        "kobeBeef": "神户牛肉"
     }
 }

@@ -3,6 +3,7 @@ import React from 'react'
 import Color from "@common/color"
 import Banner from './components/banner'
 import Categories from './components/categories'
+import ProductList from './components/productList'
 import LeftComponent from './components/leftComponent'
 import RightComponent from './components/rightComponent'
 import { ScrollView } from 'react-native-virtualized-view'
@@ -15,7 +16,7 @@ const Home = () => {
 
   return (
     <View style={[styles.container, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE }]}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <Header
           containerStyle={styles.containerStyleHeader}
           leftComponent={<LeftComponent />}
@@ -24,6 +25,7 @@ const Home = () => {
         />
         <Banner />
         <Categories />
+        <ProductList />
       </ScrollView>
     </View>
   )
@@ -34,6 +36,7 @@ export default Home
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingBottom: 80
   },
   containerStyleHeader: { borderBottomWidth: 0 },
 })
