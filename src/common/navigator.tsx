@@ -6,7 +6,8 @@ enum NameNavigator {
     PROFILE = "Profile",
     SUPPORT = "Support",
     LOGIN = "Login",
-    STPROFILE = "SettingProfile"
+    STPROFILE = "SettingProfile",
+    PRODUCTLIST = "ProductListByCategoryId"
 }
 
 export default NameNavigator 

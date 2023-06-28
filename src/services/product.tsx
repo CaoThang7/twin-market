@@ -16,3 +16,20 @@ export const getALlProductUsuallyBuy = async () => {
     })
     return data
 }
+
+export const findProductByCategoriesId = async (id: string) => {
+    const data: any = []
+    const querySnapshot = await firebase.firestore()
+        .collection("products")
+        .where("categoryId", "==", id)
+        .get()
+
+    querySnapshot.forEach((documentSnapshot) => {
+        data.push({
+            id: documentSnapshot.id,
+            ...documentSnapshot.data(),
+        })
+    })
+
+    return data
+}

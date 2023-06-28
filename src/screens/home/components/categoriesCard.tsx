@@ -1,3 +1,4 @@
+import React, { useState, useCallback } from 'react'
 import {
     StyleSheet,
     Text,
@@ -5,10 +6,11 @@ import {
     Image,
     TouchableOpacity
 } from 'react-native'
-import React, { useState, useCallback } from 'react'
 import Color from "@common/color"
+import NameNavigator from "@common/navigator"
 import { ItemProps } from '@models/categories'
 import { useTranslation } from "react-i18next"
+import { useNavigation } from "@react-navigation/native"
 import { useFocusEffect } from "@react-navigation/native"
 
 const CategoriesCard = ({ item }: { item: ItemProps }) => {
@@ -19,6 +21,7 @@ const CategoriesCard = ({ item }: { item: ItemProps }) => {
     const txtTitleMeat: string = t("categories:titleItemMeat")
     const txtTitleVegetables: string = t("categories:titleItemVegetables")
     const txtTitleWater: string = t("categories:titleItemWater")
+    const navigation: any = useNavigation();
 
     useFocusEffect(
         useCallback(() => {
@@ -50,8 +53,18 @@ const CategoriesCard = ({ item }: { item: ItemProps }) => {
         }
     }
 
+    const gotoProductListByCategoryId = () => {
+        navigation.navigate(NameNavigator.PRODUCTLIST, {
+            categoriesId: item.uid,
+            title: titleItem,
+            colorBg: item.colorBG
+        })
+    }
+
     return (
-        <TouchableOpacity style={[styles.item, { backgroundColor: item.colorBG }]}>
+        <TouchableOpacity
+            style={[styles.item, { backgroundColor: item.colorBG }]}
+            onPress={gotoProductListByCategoryId}>
             <Image
                 source={{ uri: item.image }}
                 style={styles.imgCategoryCard}
