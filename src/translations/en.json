@@ -54,5 +54,12 @@
         "titleItemMeat": "Meat",
         "titleItemVegetables": "Vegetables",
         "titleItemWater": "Water"
+    },
+    "products": {
+        "title": "Usually buy",
+        "kingCrabCanada": "King Crab Canada",
+        "tomatoJapan": "Tomato Japan",
+        "salmon": "Salmon",
+        "kobeBeef": "Kobe Beef"
     }
 }

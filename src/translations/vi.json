@@ -54,5 +54,12 @@
         "titleItemMeat": "Thịt",
         "titleItemVegetables": "Rau củ",
         "titleItemWater": "Nước"
+    },
+    "products": {
+        "title": "Thường xuyên mua",
+        "kingCrabCanada": "Cua Canada",
+        "tomatoJapan": "Cà chua Nhật",
+        "salmon": "Cá hồi",
+        "kobeBeef": "Thịt bò kobe"
     }
 }

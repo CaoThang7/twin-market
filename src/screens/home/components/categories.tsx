@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import Color from "@common/color"
+import CategoriesCard from './categoriesCard'
 import { useSelector } from "react-redux"
+import { useTranslation } from "react-i18next"
 import { getALlCategories } from '@services/categories'
 import { selectValueTheme } from "@redux/selector/theme"
-import { useTranslation } from "react-i18next"
-import CategoriesCard from './categoriesCard'
-import Color from "@common/color"
+import { StyleSheet, Text, View, FlatList } from 'react-native'
 
 const Categories = () => {
   const { t } = useTranslation()
@@ -41,7 +41,7 @@ export default Categories
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 15,
+    marginTop: 25,
     paddingHorizontal: 10
   },
   txtCategory: {
