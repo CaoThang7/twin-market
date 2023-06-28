@@ -4,6 +4,7 @@ export const getALlProductUsuallyBuy = async () => {
     const data: any = []
     const querySnapshot = await firebase.firestore()
         .collection("products")
+        .limit(4)
         .orderBy("quantityOrder", "desc") //sort by quantityOrder (desc: big to small)
         .get()
 
