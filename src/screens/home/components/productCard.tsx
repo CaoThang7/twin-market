@@ -7,12 +7,14 @@ import {
     Dimensions
 } from 'react-native'
 import React, { useState, useCallback } from 'react'
+import NameNavigator from "@common/navigator"
 import Color from "@common/color"
 import { useSelector } from "react-redux"
 import { useTranslation } from "react-i18next"
 import { ProductItemProps } from '@models/product'
 import { currencyFormat } from '@utils/currencyFormat'
 import { selectValueTheme } from "@redux/selector/theme"
+import { useNavigation } from "@react-navigation/native"
 import { useFocusEffect } from "@react-navigation/native"
 
 const ProductCard = ({ item }: { item: ProductItemProps }) => {
@@ -23,6 +25,7 @@ const ProductCard = ({ item }: { item: ProductItemProps }) => {
     const txtNameVegetables: string = t("products:tomatoJapan")
     const txtNameFish: string = t("products:salmon")
     const txtNameMeat: string = t("products:kobeBeef")
+    const navigation: any = useNavigation();
 
     useFocusEffect(
         useCallback(() => {
@@ -50,8 +53,16 @@ const ProductCard = ({ item }: { item: ProductItemProps }) => {
         }
     }
 
+    const gotoProductDetail = () => {
+        navigation.navigate(NameNavigator.DETAILPRODUCT, {
+            productId: item.uid
+        })
+    }
+
     return (
-        <TouchableOpacity style={[styles.item, { backgroundColor: mode ? Color.colorApp.GHOSTBLACK : '#FDF5E6' }]}>
+        <TouchableOpacity
+            style={[styles.item, { backgroundColor: mode ? Color.colorApp.GHOSTBLACK : '#FDF5E6' }]}
+            onPress={gotoProductDetail}>
             <View style={styles.imageContainer}>
                 <Image source={{ uri: item.image[0] }} style={styles.image} />
             </View>

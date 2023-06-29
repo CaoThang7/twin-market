@@ -33,3 +33,19 @@ export const findProductByCategoriesId = async (id: string) => {
 
     return data
 }
+
+export const findProductById = async (id: string) => {
+    const querySnapshot = await firebase.firestore()
+        .collection("products")
+        .where(firebase.firestore.FieldPath.documentId(), "==", id)
+        .get()
+    let product
+
+    querySnapshot.forEach((documentSnapshot) => {
+        product = {
+            id: documentSnapshot.id,
+            ...documentSnapshot.data(),
+        }
+    })
+    return product
+}

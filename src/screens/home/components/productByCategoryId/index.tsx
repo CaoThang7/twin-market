@@ -29,7 +29,7 @@ const ProductByCategoryId = ({ route }: Props) => {
         setLoading(false)
     }
 
-    const onGoBackProfile = () => {
+    const onGoBack = () => {
         navigation.goBack()
     }
 
@@ -43,7 +43,7 @@ const ProductByCategoryId = ({ route }: Props) => {
                 containerStyle={styles.headerStyle}
                 leftComponent={
                     <Icon
-                        onPress={onGoBackProfile}
+                        onPress={onGoBack}
                         name={'chevron-back-outline'}
                         type="ionicon"
                         color={mode ? Color.colorApp.WHITE : Color.colorApp.BLACK}
