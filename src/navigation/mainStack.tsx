@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import NameStack from "@common/navigator"
 import HomeTabs from "./homeTabs"
 import Support from "@screens/support"
+import DetailProduct from "@screens/home/detail"
 import SettingProfile from "@screens/profile/settingProfile"
 import ProductByCategoryId from "@screens/home/components/productByCategoryId"
 
@@ -14,6 +15,9 @@ export type RootStackParamList = {
         categoriesId: string,
         title: string,
         colorBg: string
+    }
+    DetailProduct: {
+        productId: string
     }
 };
 
@@ -48,6 +52,11 @@ const MainStack = () => {
                     options={{ headerShown: false }}
                     name={NameStack.PRODUCTLIST}
                     component={ProductByCategoryId}
+                />
+                <Stack.Screen
+                    options={{ headerShown: false }}
+                    name={NameStack.DETAILPRODUCT}
+                    component={DetailProduct}
                 />
             </Stack.Group>
         </Stack.Navigator>

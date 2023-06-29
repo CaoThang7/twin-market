@@ -57,9 +57,11 @@
     },
     "products": {
         "title": "Thường xuyên mua",
+        "titleDetail": "Chi tiết sản phẩm",
         "kingCrabCanada": "Cua Canada",
         "tomatoJapan": "Cà chua Nhật",
         "salmon": "Cá hồi",
-        "kobeBeef": "Thịt bò kobe"
+        "kobeBeef": "Thịt bò kobe",
+        "btnAddToCart": "Thêm vào giỏ hàng"
     }
 }

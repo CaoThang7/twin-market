@@ -7,13 +7,25 @@ import {
 } from 'react-native'
 import React from 'react'
 import Color from "@common/color"
+import NameNavigator from "@common/navigator"
 import { ProductItemProps } from '@models/product'
-import { AirbnbRating } from 'react-native-ratings';
+import { AirbnbRating } from 'react-native-ratings'
 import { currencyFormat } from '@utils/currencyFormat'
+import { useNavigation } from "@react-navigation/native"
 
 const ItemCard = ({ item, colorBg }: { item: ProductItemProps, colorBg: string }) => {
+  const navigation: any = useNavigation();
+
+  const gotoProductDetail = () => {
+    navigation.navigate(NameNavigator.DETAILPRODUCT, {
+      productId: item.uid
+    })
+  }
+
   return (
-    <TouchableOpacity style={[styles.container, { backgroundColor: colorBg }]}>
+    <TouchableOpacity
+      style={[styles.container, { backgroundColor: colorBg }]}
+      onPress={gotoProductDetail}>
       <View style={styles.boxItem}>
         <Image source={{ uri: item.image[0] }} style={styles.image} />
         <View style={styles.boxItemRight}>
