@@ -63,5 +63,10 @@
         "salmon": "三文鱼",
         "kobeBeef": "神户牛肉",
         "btnAddToCart": "添加到购物车"
+    },
+    "search": {
+        "titleSearch": "搜索",
+        "txtLetSearch": "让我们搜索您的产品",
+        "placeholderSearchBar": "输入产品名称"
     }
 }

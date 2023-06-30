@@ -49,3 +49,21 @@ export const findProductById = async (id: string) => {
     })
     return product
 }
+
+export const findProductByName = async (search: string) => {
+    let data: any = []
+
+    const querySearch = await firebase.firestore()
+        .collection("products")
+        .where("name", ">=", search)
+        .where("name", "<=", search + "\uf8ff")
+        .get()
+
+    querySearch.forEach((documentSnapshot) => {
+        data.push({
+            ...documentSnapshot.data(),
+            id: documentSnapshot.id,
+        })
+    })
+    return data
+}

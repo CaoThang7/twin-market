@@ -8,7 +8,8 @@ enum NameNavigator {
     LOGIN = "Login",
     STPROFILE = "SettingProfile",
     PRODUCTLIST = "ProductListByCategoryId",
-    DETAILPRODUCT = "DetailProduct"
+    DETAILPRODUCT = "DetailProduct",
+    SEARCH = "SearchScreen"
 }
 
 export default NameNavigator 

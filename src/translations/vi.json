@@ -63,5 +63,10 @@
         "salmon": "Cá hồi",
         "kobeBeef": "Thịt bò kobe",
         "btnAddToCart": "Thêm vào giỏ hàng"
+    },
+    "search": {
+        "titleSearch": "Tìm kiếm",
+        "txtLetSearch": "Hãy tìm kiếm sản phẩm của bạn",
+        "placeholderSearchBar": "Nhập tên sản phẩm"
     }
 }
