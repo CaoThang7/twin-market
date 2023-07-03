@@ -62,7 +62,8 @@
         "tomatoJapan": "Cà chua Nhật",
         "salmon": "Cá hồi",
         "kobeBeef": "Thịt bò kobe",
-        "btnAddToCart": "Thêm vào giỏ hàng"
+        "btnAddToCart": "Thêm vào giỏ hàng",
+        "btnViewCart": "Xem giỏ hàng"
     },
     "search": {
         "titleSearch": "Tìm kiếm",

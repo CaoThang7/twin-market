@@ -62,7 +62,8 @@
         "tomatoJapan": "Tomato Japan",
         "salmon": "Salmon",
         "kobeBeef": "Kobe Beef",
-        "btnAddToCart": "Add to cart"
+        "btnAddToCart": "Add to cart",
+        "btnViewCart": "View cart"
     },
     "search": {
         "titleSearch": "Search",

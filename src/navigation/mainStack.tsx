@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import NameStack from "@common/navigator"
 import HomeTabs from "./homeTabs"
 import Support from "@screens/support"
+import CartScreen from "@screens/cart/cart"
 import SearchScreen from "@screens/home/search"
 import DetailProduct from "@screens/home/detail"
 import SettingProfile from "@screens/profile/settingProfile"
@@ -20,7 +21,8 @@ export type RootStackParamList = {
     DetailProduct: {
         productId: string
     },
-    SearchScreen: undefined
+    SearchScreen: undefined,
+    CartScreen: undefined
 };
 
 const Stack = createStackNavigator<RootStackParamList>()
@@ -64,6 +66,14 @@ const MainStack = () => {
                     options={{ headerShown: false }}
                     name={NameStack.SEARCH}
                     component={SearchScreen}
+                />
+            </Stack.Group>
+            {/* cart */}
+            <Stack.Group>
+                <Stack.Screen
+                    options={{ headerShown: false }}
+                    name={NameStack.CART}
+                    component={CartScreen}
                 />
             </Stack.Group>
         </Stack.Navigator>

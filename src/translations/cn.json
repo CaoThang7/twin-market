@@ -62,7 +62,8 @@
         "tomatoJapan": "日本番茄",
         "salmon": "三文鱼",
         "kobeBeef": "神户牛肉",
-        "btnAddToCart": "添加到购物车"
+        "btnAddToCart": "添加到购物车",
+        "btnViewCart": "查看购物车"
     },
     "search": {
         "titleSearch": "搜索",

@@ -19,7 +19,8 @@ enum colorApp {
 
 export const bgColor = {
     ORANGECORAL: ['#FC7721', '#FD944F'],
-    CHERRY: ['#eb3349', '#f45c43']
+    CHERRY: ['#eb3349', '#f45c43'],
+    LUSH: ['#0BAB64', '#00B712']
 }
 
 export default { colorApp, bgColor }
