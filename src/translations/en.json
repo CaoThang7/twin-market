@@ -74,6 +74,7 @@
         "titleHeader": "Cart",
         "txtNote": "Swipe left to remove product from cart",
         "txtBtnOrder": "Order",
-        "txtTotalPrice": "Total:"
+        "txtTotalPrice": "Total:",
+        "txtCartEmpty": "You have no products in your shopping cart"
     }
 }

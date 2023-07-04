@@ -74,6 +74,7 @@
         "titleHeader": "大车",
         "txtNote": "向左滑动即可从购物车中删除产品",
         "txtBtnOrder": "命令",
-        "txtTotalPrice": "全部的:"
+        "txtTotalPrice": "全部的:",
+        "txtCartEmpty": "您的购物车中没有产品"
     }
 }
