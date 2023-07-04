@@ -15,7 +15,8 @@ const reducers = combineReducers({
 const persistConfig = {
     key: 'root',
     storage: AsyncStorage,
-    cartList: ['cart']
+    cartList: ['cart'],
+    theme: ['theme']
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
