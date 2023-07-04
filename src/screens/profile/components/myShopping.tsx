@@ -1,24 +1,27 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { selectValueTheme } from "@redux/selector/theme"
+import { useNavigation } from "@react-navigation/native"
 import { myOnlineShopping } from '@models/utilsUser'
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 import Color from "@common/color"
+import NameNavigator from "@common/navigator"
 import Bill from 'react-native-vector-icons/AntDesign'
 import Cart from 'react-native-vector-icons/FontAwesome'
 import CaretRight from 'react-native-vector-icons/AntDesign'
 
 const MyShopping = () => {
-    const mode = useSelector(selectValueTheme)
     const { t } = useTranslation();
+    const navigation: any = useNavigation()
+    const mode = useSelector(selectValueTheme)
 
     const navigateMyShopping = (category: string) => {
         if (category === "order") {
             console.log("order")
         }
         if (category === "cart") {
-            console.log("cart")
+            navigation.navigate(NameNavigator.CART)
         }
     }
 

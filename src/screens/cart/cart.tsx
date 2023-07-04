@@ -2,6 +2,7 @@ import React from 'react'
 import Color from "@common/color"
 import useAuth from '@hooks/useAuth'
 import CartList from './components/cartList'
+import CartEmpty from './components/cartEmpty'
 import ButtonSuccessOrder from '@components/buttonSuccessOrder'
 import { selectValueTheme } from "@redux/selector/theme"
 import { useNavigation } from "@react-navigation/native"
@@ -52,19 +53,24 @@ const CartScreen = () => {
                 backgroundColor={mode ? Color.colorApp.BLACK : Color.colorApp.WHITE}
             />
             {/* Body */}
-            <View style={styles.body}>
-                <CartList />
-            </View>
-            <View style={[styles.footer, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE }]}>
-                <ButtonSuccessOrder
-                    color={Color.bgColor.LUSH}
-                    style={styles.btnOrder}
-                    title={t("cart:txtBtnOrder")}
-                    titleStyle={styles.titleStyle}
-                    titleTotal={t("cart:txtTotalPrice")}
-                    totalPrice={currencyFormat(totalPrice)}
-                    onPress={() => { }} />
-            </View>
+            {cartList.length == 0
+                ? <CartEmpty />
+                : <>
+                    <View style={styles.body}>
+                        <CartList />
+                    </View>
+                    <View style={[styles.footer, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE }]}>
+                        <ButtonSuccessOrder
+                            color={Color.bgColor.LUSH}
+                            style={styles.btnOrder}
+                            title={t("cart:txtBtnOrder")}
+                            titleStyle={styles.titleStyle}
+                            titleTotal={t("cart:txtTotalPrice")}
+                            totalPrice={currencyFormat(totalPrice)}
+                            onPress={() => { }} />
+                    </View>
+                </>
+            }
         </View>
     )
 }

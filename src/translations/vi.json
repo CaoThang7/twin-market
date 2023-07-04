@@ -74,6 +74,7 @@
         "titleHeader": "Giỏ hàng",
         "txtNote": "Vuốt sang trái để xoá sản phẩm khỏi giỏ hàng",
         "txtBtnOrder": "Thanh toán",
-        "txtTotalPrice": "Tổng cộng:"
+        "txtTotalPrice": "Tổng cộng:",
+        "txtCartEmpty": "Bạn chưa có sản phẩm nào trong giỏ hàng"
     }
 }
