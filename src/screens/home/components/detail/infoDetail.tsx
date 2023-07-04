@@ -12,12 +12,13 @@ import { useSelector } from "react-redux"
 import { ProductItemProps } from '@models/product'
 import { AirbnbRating } from 'react-native-ratings'
 import { currencyFormat } from '@utils/currencyFormat'
+import { imgEmptyProductDetail } from '@common/imgEmpty'
 import { selectValueTheme } from "@redux/selector/theme"
 const { width: screenWidth } = Dimensions.get('window')
 
 const InfoDetail = ({ productDetail }: { productDetail: ProductItemProps }) => {
     const carouselRef = useRef(null);
-    const dataImageDetail: any = productDetail.image
+    const dataImageDetail: any = productDetail.image ? productDetail.image : imgEmptyProductDetail
     const mode = useSelector(selectValueTheme)
 
     return (
