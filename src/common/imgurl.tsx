@@ -11,5 +11,5 @@ export default {
     imgBannerHomeThree: 'https://thegioihaisan.vn/wp-content/uploads/2020/10/HS-King-web-preview.jpg',
     imgBannerHomeFour: 'https://www.teagasc.ie/media/website/about/research-and-innovation/SW21-Thursday-image.jpg',
     imgBannerHomeFive: 'https://t4.ftcdn.net/jpg/04/19/98/19/360_F_419981971_jftDSPRJGskIgVirQqtKLItcFdEZ4Zve.jpg',
-    imgCartEmpty: 'https://assets.materialup.com/uploads/16e7d0ed-140b-4f86-9b7e-d9d1c04edb2b/preview.png'
+    imgCartEmpty: 'https://cdn-icons-png.flaticon.com/512/5400/5400905.png'
 }
