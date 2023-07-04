@@ -38,7 +38,6 @@ const DetailProduct = ({ route }: Props) => {
     const date: Date = new Date()
     const navigation: any = useNavigation()
     const txtTitleDetail: string = t("products:titleDetail")
-
     const itemCart = cartState.filter((item) => item.userId == userInfo?.providerData[0].uid)
 
     useEffect(() => {
@@ -53,6 +52,10 @@ const DetailProduct = ({ route }: Props) => {
 
     const onGoBackProduct = () => {
         navigation.goBack()
+    }
+
+    const onGoCartScreen = () => {
+        navigation.navigate(NameNavigator.CART)
     }
 
     if (loading) {
@@ -111,7 +114,7 @@ const DetailProduct = ({ route }: Props) => {
                         title={t("products:btnViewCart")}
                         titleStyle={styles.titleStyle}
                         valueCart={itemCart.length}
-                        onPress={() => { }} />
+                        onPress={onGoCartScreen} />
                     : <ButtonComponent
                         color={Color.bgColor.CHERRY}
                         style={styles.btnAddToCart}

@@ -69,5 +69,11 @@
         "titleSearch": "搜索",
         "txtLetSearch": "让我们搜索您的产品",
         "placeholderSearchBar": "输入产品名称"
+    },
+    "cart": {
+        "titleHeader": "大车",
+        "txtNote": "向左滑动即可从购物车中删除产品",
+        "txtBtnOrder": "命令",
+        "txtTotalPrice": "全部的:"
     }
 }

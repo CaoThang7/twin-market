@@ -69,5 +69,11 @@
         "titleSearch": "Search",
         "txtLetSearch": "Let's search for your products",
         "placeholderSearchBar": "Enter product name"
+    },
+    "cart": {
+        "titleHeader": "Cart",
+        "txtNote": "Swipe left to remove product from cart",
+        "txtBtnOrder": "Order",
+        "txtTotalPrice": "Total:"
     }
 }
