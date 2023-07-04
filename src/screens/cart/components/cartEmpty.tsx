@@ -5,6 +5,7 @@ import {
     Image
 } from 'react-native'
 import React from 'react'
+import Color from "@common/color"
 import imgurl from '@common/imgurl'
 import { useTranslation } from "react-i18next"
 
@@ -30,10 +31,12 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     imgCartEmpty: {
-        height: 200,
-        width: 200
+        height: 150,
+        width: 150,
+        marginRight: 30
     },
     txtCartEmpty: {
-        fontSize: 16
+        fontSize: 16,
+        color: Color.colorApp.DRAKGREY
     }
 })
