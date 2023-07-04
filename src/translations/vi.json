@@ -69,5 +69,11 @@
         "titleSearch": "Tìm kiếm",
         "txtLetSearch": "Hãy tìm kiếm sản phẩm của bạn",
         "placeholderSearchBar": "Nhập tên sản phẩm"
+    },
+    "cart": {
+        "titleHeader": "Giỏ hàng",
+        "txtNote": "Vuốt sang trái để xoá sản phẩm khỏi giỏ hàng",
+        "txtBtnOrder": "Thanh toán",
+        "txtTotalPrice": "Tổng cộng:"
     }
 }

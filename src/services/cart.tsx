@@ -16,7 +16,6 @@ export const findCartByUserId = async (userId: string) => {
             .where("userId", "==", userId)
             .get()
 
-
         querySnapshot.forEach((documentSnapshot) => {
             data.push({
                 id: documentSnapshot.id,
@@ -26,4 +25,16 @@ export const findCartByUserId = async (userId: string) => {
     }
 
     return data
+}
+
+export const updateCart = async (cartId: string, data: any) => {
+    await firebase.firestore()
+        .collection("carts")
+        .doc(cartId)
+        .update(data)
+        .then(() => { })
+}
+
+export const deleteCartById = async (cartId: string) => {
+    await firebase.firestore().collection("carts").doc(cartId).delete()
 }
