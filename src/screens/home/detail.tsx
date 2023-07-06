@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import InfoDetail from './components/detail/infoDetail'
 import ButtonSuccessCart from '@components/buttonSuccessCart'
+import HeaderDetail from './components/detail/headerDetail'
+import InfoDetail from './components/detail/infoDetail'
 import ButtonComponent from '@components/button'
 import NameNavigator from "@common/navigator"
 import Loading from '@components/loading'
@@ -13,7 +14,6 @@ import { addToCart } from "@redux/slices/cart"
 import { StyleSheet, View } from 'react-native'
 import { selectCart } from '@redux/selector/cart'
 import { findProductById } from '@services/product'
-import { Icon, Header } from "react-native-elements"
 import { useAppDispatch } from "@hooks/useTypeRedux"
 import { useNavigation } from "@react-navigation/native"
 import { selectValueTheme } from "@redux/selector/theme"
@@ -37,7 +37,6 @@ const DetailProduct = ({ route }: Props) => {
     const cartId = uuid.v4()
     const date: Date = new Date()
     const navigation: any = useNavigation()
-    const txtTitleDetail: string = t("products:titleDetail")
     const itemCart = cartState.filter((item) => item.userId == userInfo?.providerData[0].uid)
 
     useEffect(() => {
@@ -80,32 +79,13 @@ const DetailProduct = ({ route }: Props) => {
 
     return (
         <View style={[styles.container, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE }]}>
-            <Header
-                containerStyle={styles.headerStyle}
-                leftComponent={
-                    <Icon
-                        onPress={onGoBackProduct}
-                        name={'chevron-back-outline'}
-                        type="ionicon"
-                        color={mode ? Color.colorApp.WHITE : Color.colorApp.BLACK}
-                        size={36}
-                    />
-                }
-                centerComponent={{
-                    text: txtTitleDetail,
-                    style: {
-                        color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK,
-                        marginTop: 10,
-                        fontWeight: 'bold',
-                        fontSize: 20
-                    }
-                }}
-                backgroundColor={mode ? Color.colorApp.BLACK : Color.colorApp.WHITE}
-            />
+            {/* Header */}
+            <HeaderDetail onPress={onGoBackProduct} />
             {/* Body */}
             <ScrollView style={styles.body}>
                 <InfoDetail productDetail={productDetail} />
             </ScrollView>
+            {/* Footer */}
             <View style={[styles.footer, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE }]}>
                 {isVisible
                     ? <ButtonSuccessCart
@@ -150,7 +130,6 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         paddingHorizontal: 10,
     },
-    headerStyle: { borderBottomWidth: 0 },
     btnAddToCart: {
         marginTop: 15,
     },
