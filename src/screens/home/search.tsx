@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Color from "@common/color"
 import SearchBar from './components/search/searchBar'
+import HeaderSearch from './components/search/headerSearch'
 import ProductSearch from './components/search/productSearch'
 import { selectValueTheme } from "@redux/selector/theme"
 import { useNavigation } from "@react-navigation/native"
 import { StyleSheet, Text, View } from 'react-native'
 import { findProductByName } from '@services/product'
-import { Icon, Header } from "react-native-elements"
 import { useTranslation } from "react-i18next"
 import { useSelector } from "react-redux"
 
@@ -17,7 +17,6 @@ const SearchScreen = () => {
     const [search, setSearch] = useState('')
     const [productList, setProductList] = useState<any[]>([])
     const txtLetSearch: string = t("search:txtLetSearch")
-    const txtTitle: string = t("search:titleSearch")
 
     useEffect(() => {
         searchProductByName()
@@ -40,28 +39,7 @@ const SearchScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.WHITE }]}>
-            <Header
-                containerStyle={styles.headerStyle}
-                leftComponent={
-                    <Icon
-                        onPress={onGoBackHomeScreen}
-                        name={'chevron-back-outline'}
-                        type="ionicon"
-                        color={mode ? Color.colorApp.WHITE : Color.colorApp.BLACK}
-                        size={36}
-                    />
-                }
-                centerComponent={{
-                    text: txtTitle,
-                    style: {
-                        color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK,
-                        marginTop: 10,
-                        fontWeight: 'bold',
-                        fontSize: 20
-                    }
-                }}
-                backgroundColor={mode ? Color.colorApp.BLACK : Color.colorApp.WHITE}
-            />
+            <HeaderSearch onPress={onGoBackHomeScreen} />
             <SearchBar
                 search={search}
                 onChangeSearch={onChangeSearch}
@@ -86,7 +64,6 @@ const styles = StyleSheet.create({
     body: {
         flex: 1,
     },
-    headerStyle: { borderBottomWidth: 0 },
     txtSearch: {
         textAlign: 'center',
         marginTop: 20,

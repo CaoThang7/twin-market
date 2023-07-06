@@ -3,12 +3,12 @@ import Color from "@common/color"
 import useAuth from '@hooks/useAuth'
 import UserCart from './components/userCart'
 import ButtonComponent from '@components/button'
+import HeaderOrder from './components/headerOrder'
 import DeliveryServices from './components/delivery'
 import { useSelector } from "react-redux"
 import { useTranslation } from "react-i18next"
 import { StyleSheet, View } from 'react-native'
 import { findCartByUserId } from '@services/cart'
-import { Icon, Header } from "react-native-elements"
 import { selectValueTheme } from "@redux/selector/theme"
 import { useNavigation } from "@react-navigation/native"
 import { BottomSheetOrder } from '@components/bottomsheet'
@@ -24,7 +24,6 @@ const OrderScreen = () => {
     const [selectedAddress, setSelectedAddress] = useState(t("order:txtNoSelectAddress"))
 
     const priceDelivery: number = 2;
-    const txtTitle: string = t("order:titleHeader")
     const totalPrice = cartList.reduce((sum, item) => sum + (item.products.price * item.quantity), 0)
     const totalPriceFinal: number = priceDelivery + totalPrice
 
@@ -43,28 +42,8 @@ const OrderScreen = () => {
 
     return (
         <View style={[styles.container, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.GHOSTWHITE }]}>
-            <Header
-                containerStyle={[styles.headerStyle, { backgroundColor: mode ? Color.colorApp.BLACK : Color.colorApp.GHOSTWHITE }]}
-                leftComponent={
-                    <Icon
-                        onPress={onGoBack}
-                        name={'chevron-back-outline'}
-                        type="ionicon"
-                        color={mode ? Color.colorApp.WHITE : Color.colorApp.BLACK}
-                        size={36}
-                    />
-                }
-                centerComponent={{
-                    text: txtTitle,
-                    style: {
-                        color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK,
-                        marginTop: 10,
-                        fontWeight: 'bold',
-                        fontSize: 20
-                    }
-                }}
-                backgroundColor={mode ? Color.colorApp.BLACK : Color.colorApp.WHITE}
-            />
+            {/* Header */}
+            <HeaderOrder onPress={onGoBack} />
             {/* Body */}
             <View style={styles.body}>
                 <UserCart cartList={cartList} />
@@ -110,7 +89,6 @@ const styles = StyleSheet.create({
     body: {
         flex: 1,
     },
-    headerStyle: { borderBottomWidth: 0 },
     footer: {
         flex: 0.35,
         borderTopWidth: 0,
