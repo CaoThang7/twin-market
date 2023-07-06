@@ -76,5 +76,20 @@
         "txtBtnOrder": "Thanh toán",
         "txtTotalPrice": "Tổng cộng:",
         "txtCartEmpty": "Bạn chưa có sản phẩm nào trong giỏ hàng"
+    },
+    "order": {
+        "titleHeader": "Đặt hàng",
+        "txtDelivery": "Dịch vụ giao hàng:",
+        "txtTaxFees": "Thuế & lệ phí:",
+        "txtTotalPrice": "Tổng số tiền:",
+        "txtFree": "miễn phí",
+        "titlePayment": "Hình thức thanh toán:",
+        "titleCash": "Tiền mặt",
+        "subTitleCash": "Thanh toán tiền mặt khi nhận hàng",
+        "titleAddress": "Địa chỉ:",
+        "txtChooseAddress": "Chọn địa chỉ",
+        "txtNoSelectAddress": "Không có địa chỉ nào được chọn",
+        "txtBtnConfirm": "Xác nhận đơn hàng",
+        "txtOrder": "Kiểm tra thông tin"
     }
 }

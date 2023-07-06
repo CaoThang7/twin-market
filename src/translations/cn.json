@@ -76,5 +76,20 @@
         "txtBtnOrder": "命令",
         "txtTotalPrice": "全部的:",
         "txtCartEmpty": "您的购物车中没有产品"
+    },
+    "order": {
+        "titleHeader": "命令",
+        "txtDelivery": "送货服务:",
+        "txtTaxFees": "税费费用:",
+        "txtTotalPrice": "总价:",
+        "txtFree": "自由的",
+        "titlePayment": "付款方式:",
+        "titleCash": "现金",
+        "subTitleCash": "收到货后现金支付",
+        "titleAddress": "地址:",
+        "txtChooseAddress": "选择地址",
+        "txtNoSelectAddress": "没有选择地址",
+        "txtBtnConfirm": "订单确认",
+        "txtOrder": "检查信息"
     }
 }

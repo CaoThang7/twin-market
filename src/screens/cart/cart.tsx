@@ -2,6 +2,7 @@ import React from 'react'
 import Color from "@common/color"
 import useAuth from '@hooks/useAuth'
 import CartList from './components/cartList'
+import NameNavigator from '@common/navigator'
 import CartEmpty from './components/cartEmpty'
 import ButtonSuccessOrder from '@components/buttonSuccessOrder'
 import { selectValueTheme } from "@redux/selector/theme"
@@ -16,7 +17,7 @@ import { useSelector } from "react-redux"
 const CartScreen = () => {
     const { t } = useTranslation()
     const { userInfo } = useAuth()
-    const navigation = useNavigation()
+    const navigation: any = useNavigation()
     const cartState = useSelector(selectCart)
     const mode = useSelector(selectValueTheme)
 
@@ -26,6 +27,10 @@ const CartScreen = () => {
 
     const onGoBackProductDetail = () => {
         navigation.goBack()
+    }
+
+    const onGoOrderScreen = () => {
+        navigation.navigate(NameNavigator.ORDER)
     }
 
     return (
@@ -67,7 +72,7 @@ const CartScreen = () => {
                             titleStyle={styles.titleStyle}
                             titleTotal={t("cart:txtTotalPrice")}
                             totalPrice={currencyFormat(totalPrice)}
-                            onPress={() => { }} />
+                            onPress={onGoOrderScreen} />
                     </View>
                 </>
             }

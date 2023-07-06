@@ -76,5 +76,20 @@
         "txtBtnOrder": "Order",
         "txtTotalPrice": "Total:",
         "txtCartEmpty": "You have no products in your shopping cart"
+    },
+    "order": {
+        "titleHeader": "Order",
+        "txtDelivery": "Delivery Services:",
+        "txtTaxFees": "Tax & Fees:",
+        "txtTotalPrice": "Total Price:",
+        "txtFree": "free",
+        "titlePayment": "Payments:",
+        "titleCash": "Cash",
+        "subTitleCash": "Cash payment upon receipt",
+        "titleAddress": "Address:",
+        "txtChooseAddress": "Choose address",
+        "txtNoSelectAddress": "No address selected",
+        "txtBtnConfirm": "Order confirmation",
+        "txtOrder": "Check information"
     }
 }
