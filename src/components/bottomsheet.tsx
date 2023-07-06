@@ -1,12 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
-import { BottomSheet, Switch } from '@rneui/themed';
-import { ListLanguage } from '@models/itemLanguage';
-import { RadioButton } from 'react-native-paper';
-import { ListTheme } from '@models/itemTheme';
-import Color from "@common/color"
+import Color from "@common/color";
 import imgurl from '@common/imgurl';
 import ButtonComponent from './button';
+import { ListTheme } from '@models/itemTheme';
+import { RadioButton } from 'react-native-paper';
+import { ListLanguage } from '@models/itemLanguage';
+import { ListBottomOrder } from '@models/itemBottomOrder';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { BottomSheet, Switch, ListItem, Avatar, CheckBox } from '@rneui/themed';
 
 const BottomSheetTheme: React.FC<ListTheme> = (props) => {
     return (
@@ -96,7 +97,60 @@ const BottomSheetLanguage: React.FC<ListLanguage> = (props) => {
     )
 }
 
-export { BottomSheetTheme, BottomSheetLanguage }
+const BottomSheetOrder: React.FC<ListBottomOrder> = (props) => {
+    return (
+        <BottomSheet isVisible={props.isVisible}>
+            <View style={styles.containerOrder}>
+                <View style={styles.boxTitleTheme}>
+                    <Text style={styles.txtTitleTheme}>{props.titleOrder}</Text>
+                </View>
+                {/* body */}
+                <View style={styles.bodyOrder}>
+                    {/* Payments */}
+                    <Text style={styles.txtTitlePayment}>{props.titlePayment}</Text>
+                    <ListItem bottomDivider containerStyle={styles.containerListItemOrder}>
+                        <Avatar source={{ uri: imgurl.iconDelivery }} />
+                        <ListItem.Content>
+                            <ListItem.Title style={styles.titleListItemOrder}>{props.titleCash}</ListItem.Title>
+                            <ListItem.Subtitle style={styles.subTitleListItemOrder}>{props.subTitleCash}</ListItem.Subtitle>
+                        </ListItem.Content>
+                        <CheckBox
+                            checked={true}
+                            iconType="material-community"
+                            checkedIcon="checkbox-marked"
+                            uncheckedIcon="checkbox-blank-outline"
+                            checkedColor={Color.colorApp.DARKORANGE}
+                        />
+                    </ListItem>
+                    {/* Address */}
+                    <View style={styles.boxAddress}>
+                        <Text style={styles.txtTitleAddress}>{props.titleAddress}</Text>
+                        <TouchableOpacity onPress={props.onPressChooseAddress}>
+                            <Text style={styles.txtTitleChooseAddress}>{props.txtChooseAddress}</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <Text style={styles.txtAddress} numberOfLines={1}>{props.txtAddress}</Text>
+                </View>
+                <ButtonComponent
+                    color={Color.bgColor.LUSH}
+                    style={styles.btnConfirmOrder}
+                    title={props.txtBtnConfirm}
+                    titleStyle={styles.titleStyle}
+                    onPress={props.onPressConfirm}
+                />
+                <ButtonComponent
+                    color={Color.bgColor.CHERRY}
+                    style={styles.btnCancelOrder}
+                    title={props.txtBtn}
+                    titleStyle={styles.titleStyle}
+                    onPress={props.onPress}
+                />
+            </View>
+        </BottomSheet>
+    )
+}
+
+export { BottomSheetTheme, BottomSheetLanguage, BottomSheetOrder }
 
 const styles = StyleSheet.create({
     containerBSTheme: {
@@ -161,5 +215,57 @@ const styles = StyleSheet.create({
     itemRight: {
         backgroundColor: Color.colorApp.DARKORANGE,
         borderRadius: 10
+    },
+    btnCancelOrder: {
+        marginTop: 5,
+        paddingHorizontal: 10,
+    },
+    btnConfirmOrder: {
+        marginTop: 10,
+        paddingHorizontal: 10,
+    },
+    containerOrder: {
+        height: 355,
+        backgroundColor: 'white',
+        flex: 1
+    },
+    bodyOrder: {
+        paddingHorizontal: 10,
+        marginTop: 10
+    },
+    txtTitlePayment: {
+        fontWeight: 'bold',
+        fontSize: 18,
+        color: Color.colorApp.BLACK
+    },
+    containerListItemOrder: {
+        paddingHorizontal: 0
+    },
+    titleListItemOrder: {
+        fontSize: 16,
+        fontWeight: 'bold'
+    },
+    subTitleListItemOrder: {
+        fontSize: 14,
+        color: Color.colorApp.DRAKGREY
+    },
+    txtTitleAddress: {
+        fontWeight: 'bold',
+        fontSize: 18,
+        color: Color.colorApp.BLACK
+    },
+    txtTitleChooseAddress: {
+        fontSize: 18,
+        color: Color.colorApp.BLUE
+    },
+    txtAddress: {
+        fontSize: 16,
+        color: Color.colorApp.DRAKGREY,
+        marginTop: 5,
+    },
+    boxAddress: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 10,
     }
 })

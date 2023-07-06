@@ -4,6 +4,7 @@ import NameStack from "@common/navigator"
 import HomeTabs from "./homeTabs"
 import Support from "@screens/support"
 import CartScreen from "@screens/cart/cart"
+import OrderScreen from "@screens/order/order"
 import SearchScreen from "@screens/home/search"
 import DetailProduct from "@screens/home/detail"
 import SettingProfile from "@screens/profile/settingProfile"
@@ -22,7 +23,8 @@ export type RootStackParamList = {
         productId: string
     },
     SearchScreen: undefined,
-    CartScreen: undefined
+    CartScreen: undefined,
+    OrderScreen: undefined
 };
 
 const Stack = createStackNavigator<RootStackParamList>()
@@ -74,6 +76,14 @@ const MainStack = () => {
                     options={{ headerShown: false }}
                     name={NameStack.CART}
                     component={CartScreen}
+                />
+            </Stack.Group>
+            {/* order */}
+            <Stack.Group>
+                <Stack.Screen
+                    options={{ headerShown: false }}
+                    name={NameStack.ORDER}
+                    component={OrderScreen}
                 />
             </Stack.Group>
         </Stack.Navigator>
