@@ -91,5 +91,18 @@
         "txtNoSelectAddress": "Không có địa chỉ nào được chọn",
         "txtBtnConfirm": "Xác nhận đơn hàng",
         "txtOrder": "Kiểm tra thông tin"
+    },
+    "address": {
+        "titleHeaderAddress": "Địa chỉ",
+        "txtBtnCreateAddress": "Tạo mới địa chỉ",
+        "titleHeaderCreateAddress": "Thêm địa chỉ mới",
+        "txtPlaceholderCountry": "Quốc gia",
+        "txtPlaceholderCity": "Thành phố",
+        "txtPlaceholderStreet": "Tên đường, nơi ở",
+        "txtPlaceholderPincode": "Pincode",
+        "txtBtnSubmitCreateAddress": "Lưu địa chỉ",
+        "txtSelected": "Đã chọn",
+        "txtBtnDefault": "Sử dụng",
+        "txtAddressEmpty": "Bạn chưa thêm địa chỉ nào"
     }
 }

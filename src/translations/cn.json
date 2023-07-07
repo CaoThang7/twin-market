@@ -91,5 +91,18 @@
         "txtNoSelectAddress": "没有选择地址",
         "txtBtnConfirm": "订单确认",
         "txtOrder": "检查信息"
+    },
+    "address": {
+        "titleHeaderAddress": "地址",
+        "txtBtnCreateAddress": "创建新地址",
+        "titleHeaderCreateAddress": "添加新地址",
+        "txtPlaceholderCountry": "国家",
+        "txtPlaceholderCity": "城市",
+        "txtPlaceholderStreet": "街道",
+        "txtPlaceholderPincode": "PIN码",
+        "txtBtnSubmitCreateAddress": "保存地址",
+        "txtSelected": "已选择",
+        "txtBtnDefault": "使用",
+        "txtAddressEmpty": "您还没有添加任何地址"
     }
 }

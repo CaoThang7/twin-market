@@ -11,7 +11,9 @@ enum NameNavigator {
     DETAILPRODUCT = "DetailProduct",
     SEARCH = "SearchScreen",
     CART = "CartScreen",
-    ORDER = "OrderScreen"
+    ORDER = "OrderScreen",
+    ADDRESS = "Address",
+    CREATEADDRESS = "CreateAddress"
 }
 
 export default NameNavigator 
