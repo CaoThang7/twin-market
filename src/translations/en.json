@@ -91,5 +91,18 @@
         "txtNoSelectAddress": "No address selected",
         "txtBtnConfirm": "Order confirmation",
         "txtOrder": "Check information"
+    },
+    "address": {
+        "titleHeaderAddress": "Address",
+        "txtBtnCreateAddress": "Create new address",
+        "titleHeaderCreateAddress": "Add new address",
+        "txtPlaceholderCountry": "Country",
+        "txtPlaceholderCity": "City",
+        "txtPlaceholderStreet": "Street",
+        "txtPlaceholderPincode": "Pincode",
+        "txtBtnSubmitCreateAddress": "Save address",
+        "txtSelected": "Selected",
+        "txtBtnDefault": "Use",
+        "txtAddressEmpty": "You haven't added any addresses yet"
     }
 }
