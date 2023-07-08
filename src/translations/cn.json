@@ -90,7 +90,9 @@
         "txtChooseAddress": "选择地址",
         "txtNoSelectAddress": "没有选择地址",
         "txtBtnConfirm": "订单确认",
-        "txtOrder": "检查信息"
+        "txtOrder": "检查信息",
+        "txtOrderSuccess": "订单成功",
+        "titleBtnOrderSuccess": "查看订单"
     },
     "address": {
         "titleHeaderAddress": "地址",
@@ -103,6 +105,8 @@
         "txtBtnSubmitCreateAddress": "保存地址",
         "txtSelected": "已选择",
         "txtBtnDefault": "使用",
-        "txtAddressEmpty": "您还没有添加任何地址"
+        "txtAddressEmpty": "您还没有添加任何地址",
+        "txtErrorToastAddress": "请选择一个地址",
+        "txtSubErrorToastAddress": "地址不能为空"
     }
 }

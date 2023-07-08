@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import SuccessDialog from '@components/successDialog'
 import DeliveryServices from './components/delivery'
 import HeaderOrder from './components/headerOrder'
 import ButtonComponent from '@components/button'
+import Toast from 'react-native-toast-message'
 import NameNavigator from '@common/navigator'
 import UserCart from './components/userCart'
+import Loading from '@components/loading'
 import useAuth from '@hooks/useAuth'
+import uuid from 'react-native-uuid'
 import Color from "@common/color"
 import { useSelector } from "react-redux"
+import { createOrder } from '@services/order'
 import { useTranslation } from "react-i18next"
 import { StyleSheet, View } from 'react-native'
 import { findCartByUserId } from '@services/cart'
+import { showToastErrorAddress } from '@utils/toast'
 import { findAddressByUserId } from '@services/address'
 import { useIsFocused } from '@react-navigation/native'
 import { selectValueTheme } from "@redux/selector/theme"
@@ -24,13 +30,19 @@ const OrderScreen = () => {
     const navigation: any = useNavigation()
     const mode = useSelector(selectValueTheme)
 
-    const [cartList, setCartList] = useState<any[]>([])
+    const [loading, setLoading] = useState(false)
     const [isVisible, setIsVisible] = useState(false)
+    const [cartList, setCartList] = useState<any[]>([])
+    const [successOrder, setSuccessOrder] = useState(false)
     const [selectedAddress, setSelectedAddress] = useState(t("order:txtNoSelectAddress"))
 
-    const priceDelivery: number = 2;
+    const orderId = uuid.v4()
+    const priceDelivery: number = 2
+    const dateOrder: Date = new Date()
     const totalPrice = cartList.reduce((sum, item) => sum + (item.products.price * item.quantity), 0)
     const totalPriceFinal: number = priceDelivery + totalPrice
+    const titleError: string = t("address:txtErrorToastAddress")
+    const subTitleError: string = t("address:txtSubErrorToastAddress")
 
     useEffect(() => {
         getCartByUserId()
@@ -52,9 +64,48 @@ const OrderScreen = () => {
         })
     }
 
+    const handleSubmitOrder = () => {
+        if (selectedAddress == t("order:txtNoSelectAddress")) {
+            setLoading(true)
+            setTimeout(() => {
+                setLoading(false)
+                showToastErrorAddress(titleError, subTitleError)
+            }, 2000);
+        } else {
+            setLoading(true)
+            const order = {
+                orderId: orderId,
+                userId: userInfo?.providerData[0].uid,
+                shipping: {
+                    "priceDelivery": priceDelivery
+                },
+                payment: {
+                    "cash": true,
+                    "paypal": false,
+                    "visa": false
+                },
+                cartItem: cartList,
+                address: selectedAddress,
+                dateOrder: dateOrder,
+                totalPrice: totalPriceFinal,
+                status: 'pending'
+            }
+            createOrder(order)
+            setTimeout(() => {
+                setLoading(false)
+                setIsVisible(false)
+                setSuccessOrder(true)
+            }, 2000);
+        }
+    }
+
     const onGoChooseAddress = () => {
         setIsVisible(false)
         navigation.navigate(NameNavigator.ADDRESS)
+    }
+
+    const onGoBackHomeTab = () => {
+        navigation.navigate(NameNavigator.HOMETAB)
     }
 
     const onGoBack = () => {
@@ -85,11 +136,14 @@ const OrderScreen = () => {
             <BottomSheetOrder
                 isVisible={isVisible}
                 onPress={() => setIsVisible(false)}
-                onPressConfirm={() => { }}
+                onPressConfirm={handleSubmitOrder}
                 onPressChooseAddress={onGoChooseAddress}
                 titleOrder={t("order:txtOrder")}
                 txtBtn={t("profile:textBtnCancel")}
-                txtBtnConfirm={t("order:txtBtnConfirm")}
+                txtBtnConfirm={loading
+                    ? <Loading color={Color.colorApp.WHITE} />
+                    : t("order:txtBtnConfirm")
+                }
                 txtAddress={selectedAddress!}
                 titlePayment={t("order:titlePayment")}
                 titleCash={t("order:titleCash")}
@@ -97,6 +151,15 @@ const OrderScreen = () => {
                 titleAddress={t("order:titleAddress")}
                 txtChooseAddress={t("order:txtChooseAddress")}
             />
+            <SuccessDialog
+                isVisible={successOrder}
+                title={t("order:txtOrderSuccess")}
+                titleButton={t("order:titleBtnOrderSuccess")}
+                onPress={onGoBackHomeTab}
+                onBackdropPress={() => setSuccessOrder(false)}
+                bgColor={mode ? Color.colorApp.GHOSTBLACK : Color.colorApp.GHOSTWHITE}
+            />
+            <Toast />
         </View>
     )
 }
