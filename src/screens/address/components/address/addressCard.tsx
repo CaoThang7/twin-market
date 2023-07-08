@@ -30,7 +30,7 @@ const AddressCard = (
                     <View style={styles.boxText}>
                         <Text style={styles.txtCountry}>Country: {item.country}</Text>
                         <Text style={styles.txtItem}>City: {item.city}</Text>
-                        <Text style={styles.txtItem}>Street: {item.street}</Text>
+                        <Text style={styles.txtItem}>Street: {`${item.street.substring(0, 14)}...`}</Text>
                         <Text style={styles.txtItem}>Pincode: {item.pincode}</Text>
                     </View>
                 </View>

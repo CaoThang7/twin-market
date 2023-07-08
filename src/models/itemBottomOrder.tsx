@@ -9,7 +9,7 @@ export type ListBottomOrder = {
     titleCash: string
     subTitleCash: string
     txtBtn: string
-    txtBtnConfirm: string
+    txtBtnConfirm: string | any
     txtAddress: string
     txtChooseAddress: string
 }

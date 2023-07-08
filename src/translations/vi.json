@@ -90,7 +90,9 @@
         "txtChooseAddress": "Chọn địa chỉ",
         "txtNoSelectAddress": "Không có địa chỉ nào được chọn",
         "txtBtnConfirm": "Xác nhận đơn hàng",
-        "txtOrder": "Kiểm tra thông tin"
+        "txtOrder": "Kiểm tra thông tin",
+        "txtOrderSuccess": "Đặt hàng thành công",
+        "titleBtnOrderSuccess": "Xem đơn hàng"
     },
     "address": {
         "titleHeaderAddress": "Địa chỉ",
@@ -103,6 +105,8 @@
         "txtBtnSubmitCreateAddress": "Lưu địa chỉ",
         "txtSelected": "Đã chọn",
         "txtBtnDefault": "Sử dụng",
-        "txtAddressEmpty": "Bạn chưa thêm địa chỉ nào"
+        "txtAddressEmpty": "Bạn chưa thêm địa chỉ nào",
+        "txtErrorToastAddress": "Bạn vui lòng chọn địa chỉ",
+        "txtSubErrorToastAddress": "Địa chỉ không được bỏ trống"
     }
 }
