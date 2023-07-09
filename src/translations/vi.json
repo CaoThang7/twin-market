@@ -92,7 +92,11 @@
         "txtBtnConfirm": "Xác nhận đơn hàng",
         "txtOrder": "Kiểm tra thông tin",
         "txtOrderSuccess": "Đặt hàng thành công",
-        "titleBtnOrderSuccess": "Xem đơn hàng"
+        "titleBtnOrderSuccess": "Xem đơn hàng",
+        "titleMyOrder": "Đơn hàng của tôi",
+        "txtTabOrderPending": "Đang xử lý",
+        "txtTabOrderSuccess": "Thành công",
+        "txtTabOrderCancel": "Huỷ bỏ"
     },
     "address": {
         "titleHeaderAddress": "Địa chỉ",
@@ -108,5 +112,23 @@
         "txtAddressEmpty": "Bạn chưa thêm địa chỉ nào",
         "txtErrorToastAddress": "Bạn vui lòng chọn địa chỉ",
         "txtSubErrorToastAddress": "Địa chỉ không được bỏ trống"
+    },
+    "orderDetail": {
+        "titleHeaderOrderDetail": "Chi tiết đơn hàng",
+        "titleShipInfo": "Thông tin vận chuyển",
+        "txtPayment": "Hình thức thanh toán",
+        "txtDateOrder": "Ngày đặt hàng",
+        "titleAddress": "Địa chỉ nhận hàng",
+        "txtAddress": "Địa chỉ",
+        "titleInfoUser": "Thông tin người đặt hàng",
+        "txtFullName": "Họ và tên",
+        "txtEmail": "Email",
+        "txtPhone": "Số điện thoại",
+        "titleProduct": "Sản phẩm",
+        "titlePrice": "Thành tiền",
+        "txtPriceProduct": "Tổng tiền hàng",
+        "txtPriceShip": "Phí vận chuyển",
+        "txtTotalPrice": "Tổng cộng",
+        "txtMyOrderEmpty": "Chưa có đơn hàng"
     }
 }

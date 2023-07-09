@@ -1,15 +1,17 @@
 import React from "react"
-import { createStackNavigator } from "@react-navigation/stack"
 import NameStack from "@common/navigator"
 import HomeTabs from "./homeTabs"
 import Support from "@screens/support"
 import CartScreen from "@screens/cart/cart"
+import MyOrder from "@screens/order/myOrder"
 import Address from "@screens/address/address"
 import OrderScreen from "@screens/order/order"
 import SearchScreen from "@screens/home/search"
 import DetailProduct from "@screens/home/detail"
+import OrderDetail from "@screens/order/orderDetail"
 import CreateAddress from "@screens/address/createAddress"
 import SettingProfile from "@screens/profile/settingProfile"
+import { createStackNavigator } from "@react-navigation/stack"
 import ProductByCategoryId from "@screens/home/components/productByCategoryId"
 
 export type RootStackParamList = {
@@ -28,7 +30,11 @@ export type RootStackParamList = {
     CartScreen: undefined,
     OrderScreen: undefined,
     Address: undefined,
-    CreateAddress: undefined
+    CreateAddress: undefined,
+    MyOrder: undefined,
+    OrderDetail: {
+        orderId: string
+    },
 };
 
 const Stack = createStackNavigator<RootStackParamList>()
@@ -98,6 +104,16 @@ const MainStack = () => {
                     options={{ headerShown: false }}
                     name={NameStack.CREATEADDRESS}
                     component={CreateAddress}
+                />
+                <Stack.Screen
+                    options={{ headerShown: false }}
+                    name={NameStack.MYORDER}
+                    component={MyOrder}
+                />
+                <Stack.Screen
+                    options={{ headerShown: false }}
+                    name={NameStack.ORDERDETAIL}
+                    component={OrderDetail}
                 />
             </Stack.Group>
         </Stack.Navigator>

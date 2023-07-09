@@ -13,5 +13,6 @@ export default {
     imgBannerHomeFive: 'https://t4.ftcdn.net/jpg/04/19/98/19/360_F_419981971_jftDSPRJGskIgVirQqtKLItcFdEZ4Zve.jpg',
     imgCartEmpty: 'https://cdn-icons-png.flaticon.com/512/5400/5400905.png',
     iconDelivery: 'https://cdn-icons-png.flaticon.com/128/3063/3063822.png',
-    imgAddressEmpty: 'https://cdn-icons-png.flaticon.com/512/6644/6644401.png'
+    imgAddressEmpty: 'https://cdn-icons-png.flaticon.com/512/6644/6644401.png',
+    imgMyOrderEmpty: 'https://static.vecteezy.com/system/resources/previews/015/736/609/original/daily-planner-memo-note-paper-cute-notepad-orange-pattern-png.png'
 }

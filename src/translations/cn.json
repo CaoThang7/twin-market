@@ -92,7 +92,11 @@
         "txtBtnConfirm": "订单确认",
         "txtOrder": "检查信息",
         "txtOrderSuccess": "订单成功",
-        "titleBtnOrderSuccess": "查看订单"
+        "titleBtnOrderSuccess": "查看订单",
+        "titleMyOrder": "我的订单",
+        "txtTabOrderPending": "待办的",
+        "txtTabOrderSuccess": "成功",
+        "txtTabOrderCancel": "取消"
     },
     "address": {
         "titleHeaderAddress": "地址",
@@ -108,5 +112,23 @@
         "txtAddressEmpty": "您还没有添加任何地址",
         "txtErrorToastAddress": "请选择一个地址",
         "txtSubErrorToastAddress": "地址不能为空"
+    },
+    "orderDetail": {
+        "titleHeaderOrderDetail": "订单详细信息",
+        "titleShipInfo": "运送信息",
+        "txtPayment": "付款方式",
+        "txtDateOrder": "订购日期",
+        "titleAddress": "邮寄地址",
+        "txtAddress": "地址",
+        "titleInfoUser": "用户信息",
+        "txtFullName": "全名",
+        "txtEmail": "电子邮件",
+        "txtPhone": "电话",
+        "titleProduct": "产品",
+        "titlePrice": "变成金钱",
+        "txtPriceProduct": "产品总价",
+        "txtPriceShip": "运输费",
+        "txtTotalPrice": "最终总价",
+        "txtMyOrderEmpty": "没有订单"
     }
 }
