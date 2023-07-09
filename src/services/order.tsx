@@ -8,6 +8,24 @@ export const createOrder = (data: any) => {
         .then(() => { })
 }
 
+export const findOrderByUserId = async (userId: string) => {
+    const data: any = []
+    if (userId != undefined) {
+        const querySnapshot = await firebase.firestore()
+            .collection("orders")
+            .where("userId", "==", userId)
+            .get()
+
+        querySnapshot.forEach((documentSnapshot) => {
+            data.push({
+                id: documentSnapshot.id,
+                ...documentSnapshot.data(),
+            })
+        })
+    }
+    return data
+}
+
 export const findOrderPendingByUserId = async (userId: string) => {
     const data: any = []
     if (userId != undefined) {

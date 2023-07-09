@@ -96,7 +96,8 @@
         "titleMyOrder": "我的订单",
         "txtTabOrderPending": "待办的",
         "txtTabOrderSuccess": "成功",
-        "txtTabOrderCancel": "取消"
+        "txtTabOrderCancel": "取消",
+        "titleOrderManagement": "订单管理"
     },
     "address": {
         "titleHeaderAddress": "地址",

@@ -7,7 +7,7 @@ export interface OrderItemProps {
     payment: string
     cartItem: [CartItemProps]
     address: string
-    dateOrder: Date
+    dateOrder: Date | any
     totalPrice: number
     status: string
 };

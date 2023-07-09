@@ -96,7 +96,8 @@
         "titleMyOrder": "My Order",
         "txtTabOrderPending": "Pending",
         "txtTabOrderSuccess": "Success",
-        "txtTabOrderCancel": "Cancel"
+        "txtTabOrderCancel": "Cancel",
+        "titleOrderManagement": "Order Management"
     },
     "address": {
         "titleHeaderAddress": "Address",
