@@ -3,6 +3,8 @@ import { View } from 'react-native'
 import { useSelector } from "react-redux"
 import { selectValueTheme } from "@redux/selector/theme"
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import OrderIcons from 'react-native-vector-icons/AntDesign'
+import OrderManagement from '@screens/order/orderManagement'
 import ProfileIcons from 'react-native-vector-icons/Feather'
 import HomeIcons from 'react-native-vector-icons/Entypo'
 import Profile from '@screens/profile/profile'
@@ -54,6 +56,17 @@ const HomeTabs = () => {
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
                         <HomeIcons name='shop' color={color} size={30} />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name={NameStack.ORDERMANAGEMENT}
+                component={OrderManagement}
+                options={{
+                    headerShown: false,
+                    tabBarLabel: 'OrderManagement',
+                    tabBarIcon: ({ color, size }) => (
+                        <OrderIcons name='copy1' color={color} size={30} />
                     ),
                 }}
             />

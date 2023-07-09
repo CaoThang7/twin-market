@@ -15,7 +15,8 @@ enum NameNavigator {
     ADDRESS = "Address",
     CREATEADDRESS = "CreateAddress",
     MYORDER = "MyOrder",
-    ORDERDETAIL = "OrderDetail"
+    ORDERDETAIL = "OrderDetail",
+    ORDERMANAGEMENT = "OrderManagement"
 }
 
 export default NameNavigator 
