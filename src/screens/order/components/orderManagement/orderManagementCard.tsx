@@ -8,11 +8,13 @@ import {
 import Color from "@common/color"
 import { useSelector } from "react-redux"
 import { OrderItemProps } from '@models/order'
+import { useTranslation } from "react-i18next"
 import { currencyFormat } from '@utils/currencyFormat'
 import { selectValueTheme } from "@redux/selector/theme"
 import BarcodeIcons from 'react-native-vector-icons/FontAwesome'
 
 const OrderManagementCard = ({ item }: { item: OrderItemProps }) => {
+    const { t } = useTranslation()
     const mode = useSelector(selectValueTheme)
     const [bgLabelStatusOrder, setBgLabelStatusOrder] = useState<string>('#FFFFE0')
     const [txtLabelStatusOrder, setTxtLabelStatusOrder] = useState<string>('#EEB027')
@@ -57,7 +59,7 @@ const OrderManagementCard = ({ item }: { item: OrderItemProps }) => {
             </View>
             <View style={styles.boxTotalPrice}>
                 <Text style={[styles.txtTitleTotalPrice, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>
-                    Total Price
+                    {t("orderDetail:txtTotalPrice")}
                 </Text>
                 <Text style={[styles.txtTotalPrice, { color: mode ? Color.colorApp.WHITE : Color.colorApp.BLACK }]}>
                     {currencyFormat(item.totalPrice)}
@@ -65,7 +67,7 @@ const OrderManagementCard = ({ item }: { item: OrderItemProps }) => {
             </View>
             <View style={styles.labelStatus}>
                 <View style={styles.labelOrder}>
-                    <Text style={styles.txtLabelOrder}>order</Text>
+                    <Text style={styles.txtLabelOrder}>{t("order:titleHeader")}</Text>
                 </View>
                 <View style={[styles.labelStatusOrder, { backgroundColor: bgLabelStatusOrder }]}>
                     <Text style={[styles.txtStatusUserOrder, { color: txtLabelStatusOrder }]}>

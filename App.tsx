@@ -1,10 +1,12 @@
 import React from "react"
 import Router from "./src/navigation/rootSwitch"
 import store from "./src/redux/store"
+import { LogBox } from "react-native"
 import { Provider } from "react-redux"
 import { persistStore } from "redux-persist"
 import { PersistGate } from "redux-persist/integration/react"
 import "./src/configI18n"
+LogBox.ignoreAllLogs();
 
 let persistor = persistStore(store);
 
