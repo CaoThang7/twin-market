@@ -18,7 +18,7 @@ const MyShopping = () => {
 
     const navigateMyShopping = (category: string) => {
         if (category === "order") {
-            console.log("order")
+            navigation.navigate(NameNavigator.MYORDER)
         }
         if (category === "cart") {
             navigation.navigate(NameNavigator.CART)

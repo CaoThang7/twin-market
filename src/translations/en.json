@@ -92,7 +92,11 @@
         "txtBtnConfirm": "Order confirmation",
         "txtOrder": "Check information",
         "txtOrderSuccess": "Order success",
-        "titleBtnOrderSuccess": "View orders"
+        "titleBtnOrderSuccess": "View orders",
+        "titleMyOrder": "My Order",
+        "txtTabOrderPending": "Pending",
+        "txtTabOrderSuccess": "Success",
+        "txtTabOrderCancel": "Cancel"
     },
     "address": {
         "titleHeaderAddress": "Address",
@@ -108,5 +112,23 @@
         "txtAddressEmpty": "You haven't added any addresses yet",
         "txtErrorToastAddress": "Please choose an address",
         "txtSubErrorToastAddress": "Address not be empty"
+    },
+    "orderDetail": {
+        "titleHeaderOrderDetail": "Order details",
+        "titleShipInfo": "Shipping information",
+        "txtPayment": "Payments",
+        "txtDateOrder": "Order date",
+        "titleAddress": "Delivery address",
+        "txtAddress": "Address",
+        "titleInfoUser": "User Infomation",
+        "txtFullName": "Fullname",
+        "txtEmail": "Email",
+        "txtPhone": "Phone",
+        "titleProduct": "Product",
+        "titlePrice": "Into money",
+        "txtPriceProduct": "Total Price Product",
+        "txtPriceShip": "Transport fee",
+        "txtTotalPrice": "Final total price",
+        "txtMyOrderEmpty": "No orders"
     }
 }

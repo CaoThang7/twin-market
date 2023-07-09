@@ -76,14 +76,8 @@ const OrderScreen = () => {
             const order = {
                 orderId: orderId,
                 userId: userInfo?.providerData[0].uid,
-                shipping: {
-                    "priceDelivery": priceDelivery
-                },
-                payment: {
-                    "cash": true,
-                    "paypal": false,
-                    "visa": false
-                },
+                shipping: priceDelivery,
+                payment: "cash",
                 cartItem: cartList,
                 address: selectedAddress,
                 dateOrder: dateOrder,
